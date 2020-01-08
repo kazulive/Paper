@@ -95,17 +95,21 @@ Fig. \ref{fig:comparison_p} shows the effect of changing the value of $p$ in the
 	\caption{Comparison of decomposition results for different values of norm $p$. ((a)-(c) top: reflectance, bottom: illumination)}
 	\label{fig:comparison_p}
 \end{figure*}
+
 \section{Adaptive Texture Map} \label{sec:adaptive}
-Low-light images usually have much noise hidden in dark regions. However, noise reduction over the entire images can damage detail in bright regions. In addition, the preferable reflectance's gradients should be smooth in homogeneous regions while undamaged at edges. 
-Therefore, $W$ is set so that the third term performs strong noise reduction in dark and homogeneous regions, while it performs weak noise reduction in bright and textures regions. The formulation of $W$ is given as:
+Low-light images usually have much noise hidden in dark regions. 
+However, noise reduction over the entire image damages detail in bright regions. 
+In addition, the preferable reflectance's gradients should be smooth in homogeneous regions while undamaged at edges. 
+Therefore, $W$ is set so that the third term performs strong noise reduction in dark and homogeneous regions, while it performs weak noise reduction in bright and textures regions. 
+The formulation of $W$ is given as:
 \begin{equation}
 W_{d} = W_{B} \circ A_{d}, \label{eq: adaptive_texture}
 \end{equation}
-where $d$ represents horizontal ($h$) and vertical ($v$) directions, and $W_{B}$ represents the initial estimated weight map by inverting the normalized bright channel, and $A_{d}$ represents the texture map that effectively distinguish between homogeneous and textures regions.\par In the same way as in \cite{activation}, $W_{B}$ is chosen to selectively assign different weight values to both bright and dark regions:
+where $d$ represents horizontal ($h$) and vertical ($v$) directions, and $W_{B}$ represents the initial estimated weight map by inverting the normalized bright channel, and $A_{d}$ represents the texture map that effectively distinguish between homogeneous and textures regions.\par 
+In the same way as in \cite{activation}, $W_{B}$ is chosen to selectively assign different weight values to both bright and dark regions:
 \begin{equation}
 W_{B} = 1.0 - \max_{c \in \{r, g, b\}}S^{c}. \label{eq: initial_weight}
 \end{equation}
-\par
 Furthermore, texture map is set as the inverse of the $a_{r}$-th power of the absolute value of a mean local variation (MLV) \cite{jiep} that can significantly distinguish between homogeneous regions and textures regions:
 \begin{equation}
 A_{d} = \frac{1}{\left |\frac{1}{|\Omega|}\sum_{\Omega}\nabla_{d}{R} \right|^{a_{r}} + \epsilon}, \label{eq: mlv}
@@ -115,19 +119,14 @@ Figure \ref{fig:mlv_pow} shows that tiny details are more revealing, as the valu
 Comparing Fig. \ref{fig:wo} and \ref{fig:w}, we see that the estimated reflectance with $W$ can suppress over-enhancement in bright regions and noise amplification in dark regions. Moreover, the estimated reflectance with $W$ can reveal details and textures in spite of noise reduction. 
 \begin{figure}[t]
 \centering
-\begin{minipage}[b]{0.32\hsize}
+\begin{minipage}[b]{0.49\hsize}
 \centering
-\includegraphics[height=0.75\hsize]{images/noise/input.eps}
-\subcaption{Observed image} \label{fig:weight_input}
-\end{minipage}
-\begin{minipage}[b]{0.32\hsize}
-\centering
-\includegraphics[height=0.75\hsize]{images/noise/MLV_10.eps}
+\includegraphics[height=0.55\hsize]{images/noise/MLV_10.eps}
 \subcaption{MLV ($a_{r}=1.0$)} \label{fig:mlv_normal}
 \end{minipage}
-\begin{minipage}[b]{0.32\hsize}
+\begin{minipage}[b]{0.49\hsize}
 \centering
-\includegraphics[height=0.75\hsize]{images/noise/MLV_05.eps}
+\includegraphics[height=0.55\hsize]{images/noise/MLV_05.eps}
 \subcaption{MLV ($a_{r}=0.5$)} \label{fig:mlv_pow}
 \end{minipage}
 \caption{Comparison of MLV results for different values of $a_{r}$. As the value of $a_{r}$ decreases, MLV can obtain more rich gradient information.}
@@ -138,16 +137,22 @@ Comparing Fig. \ref{fig:wo} and \ref{fig:w}, we see that the estimated reflectan
 \centering
 \begin{minipage}[b]{0.49\hsize}
 \centering
-\includegraphics[width = 48mm, height=36mm]{images/noise/mlv_wo.eps}
-\subcaption{Reflectance w/o $W$} \label{fig: wo}
+\includegraphics[height=0.65\hsize]{images/noise/mlv_wo.eps}
+\subcaption{Reflectance w/o $W$} \label{fig:wo}
 \end{minipage}
 \begin{minipage}[b]{0.49\hsize}
 \centering
-\includegraphics[width = 48mm, height=36mm]{images/noise/mlv_reflectance.eps}
-\subcaption{Reflectance with $W$} \label{fig: w}
+\includegraphics[height=0.65\hsize]{images/noise/mlv_reflectance.eps}
+\subcaption{Reflectance with $W$} \label{fig:w}
 \end{minipage}
 \caption{Comparison of reflectance results. (a) the estimated reflectance without $W$; (b) the estimated reflectance with $W$.}
 \label{fig: noise_suppression}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\hsize]{images/adaptive/classification.eps}
+	\caption{The image represents the flowchart of the proposed method.} \label{fig:adaptive/classification}
 \end{figure}
 
 \section{Solution} \label{sec:solution}
@@ -156,26 +161,26 @@ The minimization optimization problem (\ref{eq:proposed/equation}) can be solved
 \renewcommand{\labelenumi}{\arabic{enumi}).}
 \item \textbf{$\boldmath{I}$ sub-problem:} Collecting the terms related to $I$ leads to the following equation (\ref{eq:proposed/equation}):
 \begin{equation}
-I_{k} = \argmin_{I}\|I \circ R_{k-1} - S\|_{2}^{2} + \alpha\|U \circ \nabla{I}\|_{2}^{2} 
+I_{k} = \argmin_{I}\|R_{k-1} \circ I - S\|_{2}^{2} + \alpha\|U \circ \nabla{I}\|_{2}^{2} 
 +\lambda \|I - B\|_{2}^{2}. \label{eq: i_subproblem}
 \end{equation}
 We reduce the equation (\ref{eq: i_subproblem}) to a classic least square problem:
 \begin{equation}
-i_{k} = \argmin_{i} \|\hat{i}r_{k-1} - s\|_{2}^{2} + \alpha\|\hat{u}Di\|_{2}^{2} + \lambda \|i - b\|_{2}^{2}, \label{eq:classic_i_subproblem}
+i_{k} = \argmin_{i} \|r_{k-1} \hat{i} - s\|_{2}^{2} + \alpha\|\hat{u}Di\|_{2}^{2} + \lambda \|i - b\|_{2}^{2}, \label{eq:classic_i_subproblem}
 \end{equation}
 where $i$ is the vectorized format of $I$ and $\hat{i}$ represents a diagonal matrix with $i$ as its entries, and $D$ contains $D_{h}$ and $D_{v}$, which are the Toeplitz matrices from the discrete gradient operators with forward difference.
 The same notation is used for other matrices (r, s, b corresponds to R, S, and B, respectively). By differentiating equation (\ref{eq:classic_i_subproblem}) with respect to $i$, and setting the derivative to $0$, we have the following solution:
 \begin{equation}
-i_{k+1} = (\hat{r}_{k-1}^{T}\hat{r}_{k-1} + \alpha D^{T}\hat{u}D + \lambda{1})^{-1} (\hat{r}_{k-1}^{T}s + \lambda{\hat{b}}). \label{eq: i_solution}
+i_{k+1} = (\hat{r}_{k-1}\hat{r}_{k-1}^{T} + \alpha D^{T}\hat{u}D + \lambda{1})^{-1} (\hat{r}_{k-1}^{T}s + \lambda{\hat{b}}). \label{eq: i_solution}
 \end{equation}
 Then, we reformulate the obtained $i_{k}$ into matrix format $I_{k}$.
 \item \textbf{$R$ sub-problem:} After acquiring $I_{k}$ from the above solution, the joint optimization (\ref{eq:proposed/equation}) related to $R$ becomes similar to that of $I$:
 \begin{equation}
-R_{k} = \argmin_{R}\|I_{k} \circ R - S\|_{2}^{2} + \beta\|W \circ \nabla{R}\|_{2}^{2}. \label{eq: r_subproblem}
+R_{k} = \argmin_{R}\|R \circ I_{k} - S\|_{2}^{2} + \beta\|W \circ \nabla{R}\|_{2}^{2}. \label{eq: r_subproblem}
 \end{equation}
 In the same way as in the former derivation, we provide the solution of $R$ as follows:
 \begin{equation}
-r_{k} = (\hat{i}_{k}^{T}\hat{i}_{k} + \beta D^{T}\hat{w}D)^{-1} (\hat{i}_{k}^{T}s). \label{eq: solution_r_subproblem}
+r_{k} = (\hat{i}_{k}\hat{i}_{k}^{T} + \beta D^{T}\hat{w}D)^{-1} (\hat{i}_{k}^{T}s). \label{eq: solution_r_subproblem}
 \end{equation}
 Similarly, we reformulate the obtained $r_{k}$ into matrix format $R_{k}$.
 \end{enumerate}

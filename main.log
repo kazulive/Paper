@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (sjis) (TeX Live 2017/W32TeX) (preloaded format=platex 2017.4.9)  7 JAN 2020 20:25
+This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (sjis) (TeX Live 2017/W32TeX) (preloaded format=platex 2017.4.9)  8 JAN 2020 17:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -544,14 +544,6 @@ Overfull \hbox (1.82047pt too wide) in paragraph at lines 92--93
  []
 
 [10]
-
-LaTeX Warning: Reference `fig:wo' on page 11 undefined on input line 115.
-
-
-LaTeX Warning: Reference `fig:w' on page 11 undefined on input line 115.
-
-File: images/noise/input.eps Graphic file (type eps)
-<images/noise/input.eps>
 File: images/noise/MLV_10.eps Graphic file (type eps)
  <images/noise/MLV_10.eps>
 File: images/noise/MLV_05.eps Graphic file (type eps)
@@ -560,9 +552,12 @@ File: images/noise/mlv_wo.eps Graphic file (type eps)
 
 <images/noise/mlv_wo.eps>
 File: images/noise/mlv_reflectance.eps Graphic file (type eps)
- <images/noise/mlv_reflectance.eps> [11] [12]
+ <images/noise/mlv_reflectance.eps>
+File: images/adaptive/classification.eps Graphic file (type eps)
 
-Package mathptmx Warning: There are no bold math fonts on input line 157.
+<images/adaptive/classification.eps> [11] [12]
+
+Package mathptmx Warning: There are no bold math fonts on input line 162.
 
 [13]) [14]
 \openout2 = `experiment.aux'.
@@ -609,18 +604,14 @@ No file app.tex.
 No file bio.tex.
 (./main.aux (./abs.aux) (./introduction.aux) (./related.aux) (./proposed.aux)
 (./experiment.aux) (./conclusion.aux) (./acknowledgement.aux) (./app.aux)
-(./bib.aux) (./bio.aux))
-
-LaTeX Warning: There were undefined references.
-
- ) 
+(./bib.aux) (./bio.aux)) ) 
 Here is how much of TeX's memory you used:
- 3644 strings out of 493671
- 52688 string characters out of 6151255
- 126843 words of memory out of 5000000
- 7061 multiletter control sequences out of 15000+600000
+ 3643 strings out of 493671
+ 52700 string characters out of 6151255
+ 124843 words of memory out of 5000000
+ 7058 multiletter control sequences out of 15000+600000
  43664 words of font info for 132 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  42i,16n,41p,1112b,600s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on main.dvi (23 pages, 49124 bytes).
+Output written on main.dvi (23 pages, 49148 bytes).

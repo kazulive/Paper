@@ -62,7 +62,7 @@ Various researches have proposed energy minimization problems based on Retinex i
 \end{equation}
 where $\alpha$, $\beta$, $\gamma$ are three positive parameters, and $I_{0}$ is the enhanced illumination using gamma correction.
 The first term $\|R \circ I - S\|_{2}^{2}$, which corresponds to L2 data fidelity, is to minimize the distance between the estimated ($R\circ{I}$) and an observed image $S$. The second term $\|\nabla{I}\|_{2}^{2} $ enforces spatially smoothness on the illumination $I$. The third term $\|\nabla{R}\|_{1}$, which corresponds to TV reflectance sparsity, enforces piece-wise continuous on the reflectance $R$. The last term $\|I-I_{0}\|_{2}^{2}$, which penalizes the brightness of illumination component, is used to avoid a scaling problem. \par
-This method demonstrated the linear domain model is better than the log-transformed domain model in preserving naturalness. As shown in Fig. \ref{fig:variational/srie}, this method can suppress the over-enhancement in the estimated reflectance thanks to the third term which minimizes the difference between $I$ and $I_{0}$. Moreover, since this method imposes $L_{1}$ norm regularization on the reflectance, the estimated reflectance can suppress noise amplification.
+This method demonstrated the linear domain model is better than the log-transformed domain model in preserving naturalness. As shown in Fig. \ref{fig:variational/srie}, this method employs the third term which minimizes the difference between $I$ and $I_{0}$ for the sake of suppression of over-enhancement in the estimated reflectance. Moreover, this method can suppress noise amplification due to the $L_{1}$ norm regularization on the reflectance in the estimated reflectance.
 
 %----SRIEの図---- %
 \begin{figure}[htbp]
