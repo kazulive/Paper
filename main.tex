@@ -1,0 +1,113 @@
+\documentclass[a4paper,titlepage,12pt,twoside]{report}
+\usepackage[dvipdfmx]{graphicx} 
+\usepackage{here}
+\usepackage{longtable}
+\usepackage{makeidx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{epsfig}
+\usepackage{amsfonts}
+\usepackage{multirow}
+\usepackage{slashbox}
+\usepackage{url}
+\usepackage[subrefformat=parens]{subcaption}
+\usepackage{bm}
+\usepackage{scalefnt}
+\usepackage{mathptmx}
+\newcommand{\argmin}{\mathop{\rm arg~min}\limits}
+\renewcommand{\bibname}{Reference}
+
+%
+% 余白の調整 (A4用紙は595ptx842pt)
+% 左側の余白
+\setlength{\oddsidemargin}{25pt}
+% 偶数の左余白
+\setlength{\evensidemargin}{25pt}
+% 本文テキスト全体の幅
+\setlength{\textwidth}{430pt}
+% 上側の余白
+\setlength{\topmargin}{20pt}
+% ヘッダの高さ
+\setlength{\headheight}{0pt}
+% ヘッダと本文テキストとの間の余白
+\setlength{\headsep}{0pt}
+% 本文テキスト全体の高さ
+\setlength{\textheight}{670pt}
+
+%\title{
+%  \fontsize{23.5pt}{23.5pt}\selectfont{
+%  Low-Light Image Enhancement\\
+%  via Mixture L2-LP Variational Retinex Model\\
+%  with Adaptive Texture Map}
+%}
+
+\title{
+  \huge{
+  Low-Light Image Enhancement\\
+  via Mixture L2-LP Variational Retinex Model\\
+  with Adaptive Texture Map}
+}
+
+\author{
+  \large{Thesis Supervisor}\\
+  \large{Prof.\ Youji Iiguni}\\[1cm]
+  \large{Kazuki Kurihara}\\[1cm]
+  \large{Division of Systems Science and Applied Informatics}\\
+  \large{Department of Systems Innovation}\\
+  \large{Graduate School of Engineering Science}\\
+  \large{Osaka University}
+}
+\date{January 28, 2020}
+
+%%%%%%%%%%%%%%%%%%%% 表紙 %%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\pagestyle{empty}
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%% 概要 %%%%%%%%%%%%%%%%%%%%
+\pagestyle{plain}
+\setcounter{page}{1}  % ページ番号を1に設定
+\pagenumbering{roman}
+\include{abs}
+
+%%%%%%%%%%%%%%%%%%%% 目次 %%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\setcounter{tocdepth}{1}
+\tableofcontents 
+%\newpage
+\mbox{}
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%% 本文 %%%%%%%%%%%%%%%%%%%%
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\include{introduction}
+\cleardoublepage
+\include{related}
+\cleardoublepage
+\include{proposed}
+\cleardoublepage
+\include{experiment}
+\cleardoublepage
+\include{conclusion}
+\include{acknowledgement}
+
+%%%%%%%%%%%%%%謝辞，参考文献，付録%%%%%%%%%%%%%%
+\appendix % 付録
+
+\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsection}{\thesection-\Roman{subsection}}
+
+\makeatletter % プリアンブルで@を使うために必要
+ \renewcommand{\theequation}{A.\arabic{equation}}
+\makeatother % プリアンブルで@を使うために必要
+
+\include{app}
+
+\include{bib}
+\include{bio}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

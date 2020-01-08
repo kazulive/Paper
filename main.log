@@ -1,0 +1,626 @@
+This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (sjis) (TeX Live 2017/W32TeX) (preloaded format=platex 2017.4.9)  7 JAN 2020 20:25
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./main.tex platex.exe -no-guess-input-enc -kanji=utf8 -synctex=1 -interaction
+=nonstopmode -jobname=main main.tex uplatex.exe -no-guess-input-enc -kanji=utf8
+ -synctex=1 -interaction=nonstopmode main.tex latex.exe -synctex=1 -interaction
+=nonstopmode main.tex
+(./main.tex
+pLaTeX2e <2016/11/29> (based on LaTeX2e <2017/01/01> patch level 3)
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+(c:/w32tex/share/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+(c:/w32tex/share/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count82
+\c@chapter=\count83
+\c@section=\count84
+\c@subsection=\count85
+\c@subsubsection=\count86
+\c@paragraph=\count87
+\c@subparagraph=\count88
+\c@figure=\count89
+\c@table=\count90
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen118
+)
+(c:/w32tex/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/w32tex/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(c:/w32tex/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/w32tex/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(c:/w32tex/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvipdfmx.def on input line 99.
+
+(c:/w32tex/share/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+File: dvipdfmx.def 2016/07/11 v4.12 LaTeX color/graphics driver for dvipdfmx (L
+3/ChoF)
+))
+\Gin@req@height=\dimen119
+\Gin@req@width=\dimen120
+)
+(c:/w32tex/share/texmf-dist/tex/latex/here/here.sty)
+(c:/w32tex/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count91
+\float@exts=\toks16
+\float@box=\box41
+\@float@everytoks=\toks17
+\@floatcapt=\box42
+)
+(c:/w32tex/share/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip43
+\LTright=\skip44
+\LTpre=\skip45
+\LTpost=\skip46
+\LTchunksize=\count92
+\LTcapwidth=\dimen121
+\LT@head=\box43
+\LT@firsthead=\box44
+\LT@foot=\box45
+\LT@lastfoot=\box46
+\LT@cols=\count93
+\LT@rows=\count94
+\c@LT@tables=\count95
+\c@LT@chunks=\count96
+\LT@p@ftn=\toks18
+)
+(c:/w32tex/share/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+(c:/w32tex/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/11/05 v2.16a AMS math features
+\@mathmargin=\skip47
+
+For additional information on amsmath, use the `?' option.
+(c:/w32tex/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(c:/w32tex/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen122
+))
+(c:/w32tex/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen123
+)
+(c:/w32tex/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count97
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count98
+\leftroot@=\count99
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count100
+\DOTSCASE@=\count101
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen124
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count102
+\c@MaxMatrixCols=\count103
+\dotsspace@=\muskip10
+\c@parentequation=\count104
+\dspbrk@lvl=\count105
+\tag@help=\toks20
+\row@=\count106
+\column@=\count107
+\maxfields@=\count108
+\andhelp@=\toks21
+\eqnshift@=\dimen125
+\alignsep@=\dimen126
+\tagshift@=\dimen127
+\tagwidth@=\dimen128
+\totwidth@=\dimen129
+\lineht@=\dimen130
+\@envbody=\toks22
+\multlinegap=\skip48
+\multlinetaggap=\skip49
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+(c:/w32tex/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(c:/w32tex/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(c:/w32tex/share/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
+\c@tracingmulticols=\count109
+\mult@box=\box49
+\multicol@leftmargin=\dimen131
+\c@unbalance=\count110
+\c@collectmore=\count111
+\doublecol@number=\count112
+\multicoltolerance=\count113
+\multicolpretolerance=\count114
+\full@width=\dimen132
+\page@free=\dimen133
+\premulticols=\dimen134
+\postmulticols=\dimen135
+\multicolsep=\skip50
+\multicolbaselineskip=\skip51
+\partial@page=\box50
+\last@line=\box51
+\maxbalancingoverflow=\dimen136
+\mult@rightbox=\box52
+\mult@grightbox=\box53
+\mult@gfirstbox=\box54
+\mult@firstbox=\box55
+\@tempa=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\c@columnbadness=\count115
+\c@finalcolumnbadness=\count116
+\last@try=\dimen137
+\multicolovershoot=\dimen138
+\multicolundershoot=\dimen139
+\mult@nat@firstbox=\box73
+\colbreak@box=\box74
+\mc@col@check@num=\count117
+)
+(c:/w32tex/share/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen140
+\epsfysize=\dimen141
+)
+(c:/w32tex/share/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip52
+\multirow@cntb=\count118
+\multirow@dima=\skip53
+\bigstrutjot=\dimen142
+)
+(c:/w32tex/share/texmf-dist/tex/latex/slashbox/slashbox.sty
+slashbox style by K.Yasuoka, May 1993.
+\@slashboxa=\box75
+\@slashboxb=\box76
+\@slashboxc=\box77
+\@slashboxwd=\count119
+\@slashboxht=\count120
+\@slashsepl=\dimen143
+\@slashsepr=\dimen144
+) (c:/w32tex/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(c:/w32tex/share/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+
+(c:/w32tex/share/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(c:/w32tex/share/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen145
+\captionmargin@=\dimen146
+\captionwidth=\dimen147
+\caption@tempdima=\dimen148
+\caption@indent=\dimen149
+\caption@parindent=\dimen150
+\caption@hangindent=\dimen151
+)
+\c@ContinuedFloat=\count121
+Package caption Info: float package is loaded.
+Package caption Info: longtable package is loaded.
+
+(c:/w32tex/share/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
+))
+\c@subfigure=\count122
+\c@subtable=\count123
+)
+(c:/w32tex/share/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 207.
+)
+(c:/w32tex/share/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+(c:/w32tex/share/texmf-dist/tex/latex/psnfss/mathptmx.sty
+Package: mathptmx 2005/04/12 PSNFSS-v9.2a Times w/ Math, improved (SPQR, WaS) 
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/ztmcm/m/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ztmcm/m/n on input line 28.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 29.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/ztmcm/m/it on input line 29.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/ztmcm/m/it on input line 29.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 30.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/ztmcm/m/n on input line 30.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/ztmcm/m/n on input line 30.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 31.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
+\symbold=\mathgroup9
+\symitalic=\mathgroup10
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 35.
+LaTeX Info: Redefining \hbar on input line 50.
+) (./main.aux
+(./abs.aux) (./introduction.aux) (./related.aux) (./proposed.aux)
+(./experiment.aux) (./conclusion.aux) (./acknowledgement.aux) (./app.aux)
+(./bib.aux) (./bio.aux))
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+ (I search kanjifont definition file: . . )
+(I search font definition file: . . . . . . . )
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 64.
+
+(c:/w32tex/share/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 65
+.
+
+(c:/w32tex/share/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 65
+.
+
+(c:/w32tex/share/texmf-dist/tex/latex/psnfss/omlztmcm.fd
+File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 65
+.
+
+(c:/w32tex/share/texmf-dist/tex/latex/psnfss/omsztmcm.fd
+File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 65
+.
+
+(c:/w32tex/share/texmf-dist/tex/latex/psnfss/omxztmcm.fd
+File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
+ [1
+
+] [2
+
+]
+\openout2 = `abs.aux'.
+
+
+No file abs.tex.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <24.88> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 78.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <24.88> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 78.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 78.
+(./main.toc
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+)
+\tf@toc=\write3
+\openout3 = `main.toc'.
+
+ [1
+
+
+
+
+] [2
+
+]
+\openout2 = `introduction.aux'.
+
+ (./introduction.tex
+Chapter 1.
+[1
+
+
+]) [2]
+\openout2 = `related.aux'.
+
+ (./related.tex
+Chapter 2.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 5.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 5.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
+File: images/retinex/input.eps Graphic file (type eps)
+<images/retinex/input.eps>
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 17.
+File: images/retinex/reflectance.eps Graphic file (type eps)
+ <images/retinex/reflectance.eps>
+File: images/retinex/illumination.eps Graphic file (type eps)
+
+<images/retinex/illumination.eps>
+File: images/msr/input.eps Graphic file (type eps)
+ <images/msr/input.eps>
+File: images/msr/reflectance.eps Graphic file (type eps)
+
+<images/msr/reflectance.eps>
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 40--50
+[][] [] 
+ []
+
+[3
+
+
+
+
+]
+File: images/variational/input.eps Graphic file (type eps)
+ <images/variational/input.eps>
+File: images/variational/reflectance.eps Graphic file (type eps)
+ <images/variational/reflectance.eps>
+File: images/variational/illumination.eps Graphic file (type eps)
+
+<images/variational/illumination.eps>
+File: images/variational/output.eps Graphic file (type eps)
+ <images/variational/output.eps>
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 69--89
+[][] []
+ []
+
+
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 69--89
+[] [] 
+ []
+
+[4]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 110.
+
+ (c:/w32tex/share/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 110.
+ [5]
+File: images/jiep/analysis/analysis.eps Graphic file (type eps)
+
+<images/jiep/analysis/analysis.eps>
+File: images/jiep/input.eps Graphic file (type eps)
+ <images/jiep/input.eps>
+File: images/jiep/reflectance.eps Graphic file (type eps)
+
+<images/jiep/reflectance.eps>
+File: images/jiep/illumination.eps Graphic file (type eps)
+ <images/jiep/illumination.eps>
+File: images/jiep/output.eps Graphic file (type eps)
+
+<images/jiep/output.eps>
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 131--151
+[][] []
+ []
+
+
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 131--151
+[] [] 
+ []
+
+[6]
+File: images/problems/srie/reflectance.eps Graphic file (type eps)
+ <images/problems/srie/reflectance.eps>
+File: images/problems/jiep/reflectance.eps Graphic file (type eps)
+
+<images/problems/jiep/reflectance.eps>) [7] [8]
+\openout2 = `proposed.aux'.
+
+ (./proposed.tex
+Chapter 3.
+File: images/proposed/flowchart.eps Graphic file (type eps)
+<images/proposed/flowchart.eps> [9
+
+
+
+
+]
+File: images/norm_p/graph/graph_norm.eps Graphic file (type eps)
+ <images/norm_p/graph/graph_norm.eps>
+File: images/norm_p/graph/graph_norm_p.eps Graphic file (type eps)
+
+<images/norm_p/graph/graph_norm_p.eps>
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 51--61
+[][] [] 
+ []
+
+File: images/norm_p/reflectance/p06.eps Graphic file (type eps)
+<images/norm_p/reflectance/p06.eps>
+Overfull \hbox (1.82047pt too wide) in paragraph at lines 69--70
+ [][] 
+ []
+
+File: images/norm_p/reflectance/p10.eps Graphic file (type eps)
+<images/norm_p/reflectance/p10.eps>
+Overfull \hbox (1.82047pt too wide) in paragraph at lines 73--74
+ [][] 
+ []
+
+File: images/norm_p/reflectance/p20.eps Graphic file (type eps)
+<images/norm_p/reflectance/p20.eps>
+Overfull \hbox (1.82047pt too wide) in paragraph at lines 77--78
+ [][] 
+ []
+
+File: images/norm_p/illumination/p06.eps Graphic file (type eps)
+<images/norm_p/illumination/p06.eps>
+Overfull \hbox (1.82047pt too wide) in paragraph at lines 82--83
+ [][] 
+ []
+
+File: images/norm_p/illumination/p10.eps Graphic file (type eps)
+<images/norm_p/illumination/p10.eps>
+Overfull \hbox (1.82047pt too wide) in paragraph at lines 87--88
+ [][] 
+ []
+
+File: images/norm_p/illumination/p20.eps Graphic file (type eps)
+<images/norm_p/illumination/p20.eps>
+Overfull \hbox (1.82047pt too wide) in paragraph at lines 92--93
+ [][] 
+ []
+
+[10]
+
+LaTeX Warning: Reference `fig:wo' on page 11 undefined on input line 115.
+
+
+LaTeX Warning: Reference `fig:w' on page 11 undefined on input line 115.
+
+File: images/noise/input.eps Graphic file (type eps)
+<images/noise/input.eps>
+File: images/noise/MLV_10.eps Graphic file (type eps)
+ <images/noise/MLV_10.eps>
+File: images/noise/MLV_05.eps Graphic file (type eps)
+ <images/noise/MLV_05.eps>
+File: images/noise/mlv_wo.eps Graphic file (type eps)
+
+<images/noise/mlv_wo.eps>
+File: images/noise/mlv_reflectance.eps Graphic file (type eps)
+ <images/noise/mlv_reflectance.eps> [11] [12]
+
+Package mathptmx Warning: There are no bold math fonts on input line 157.
+
+[13]) [14]
+\openout2 = `experiment.aux'.
+
+ (./experiment.tex
+Chapter 4.
+) [15
+
+
+
+
+] [16
+
+
+]
+\openout2 = `conclusion.aux'.
+
+
+No file conclusion.tex.
+\openout2 = `acknowledgement.aux'.
+
+(./acknowledgement.tex) [17
+
+
+
+
+]
+\openout2 = `app.aux'.
+
+
+No file app.tex.
+\openout2 = `bib.aux'.
+
+(./bib.tex [18
+
+
+
+
+
+]) [19]
+\openout2 = `bio.aux'.
+
+
+No file bio.tex.
+(./main.aux (./abs.aux) (./introduction.aux) (./related.aux) (./proposed.aux)
+(./experiment.aux) (./conclusion.aux) (./acknowledgement.aux) (./app.aux)
+(./bib.aux) (./bio.aux))
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3644 strings out of 493671
+ 52688 string characters out of 6151255
+ 126843 words of memory out of 5000000
+ 7061 multiletter control sequences out of 15000+600000
+ 43664 words of font info for 132 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 42i,16n,41p,1112b,600s stack positions out of 5000i,500n,10000p,500000b,80000s
+
+Output written on main.dvi (23 pages, 49124 bytes).
