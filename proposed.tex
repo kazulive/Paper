@@ -46,16 +46,16 @@ U &= \left \{
 where the variable $u$ is only approximate variable. This is because the Eq. \ref{eq:approximation} uses a $L_{2}$ norm format $\Phi(\frac{\nabla{I}}{\frac{1}{\Omega}\Sigma_{\Omega}\nabla{I}+\epsilon};\xi)$ based on \cite{l0-sparse} to approximate the $L_{0} $ norm function. As can be seen in Fig. \ref{fig:nom_p/comparison}, the red curve can approximate the most sparse $L_{0}$ function. Therefore, the proposed method can remove fine textures and preserve meaningful salient structures in the estimated illumination. As shown in Fig. \ref{fig:nom_p/graph_norm_p}, with the decease of the value $\xi$, the $L_{p}$ norm function is getting close to the $L_{0}$ function. Therefore, large-$\xi$ are more convex-like and easy to optimize, in contrast, small-$\xi$ are more steep and difficult to optimize.\par
 Fig. \ref{fig:comparison_p} shows the effect of changing the value of $p$ in the range ($0 < p \leq 2$) in the estimated illumination. As the value of $p$ decreases, the estimated illumination leaves smooth and texture-less. Concomitantly, the estimated reflectance contains more rich textures and details. In particular, when $p=0$, some salient structure information in the estimated illumination may be lost too much, because the $L_{0}$ norm has strong sparsity. 
 %----Lpノルムの概形----
-\begin{figure}[t]
+\begin{figure}[htbp]
 \vspace{-15pt}
 	\begin{minipage}[b]{0.5\hsize}
 		\centering
-		\includegraphics[width=64mm, height = 48mm]{images/norm_p/graph/graph_norm.eps}
+		\includegraphics[width=72mm, height = 54mm]{images/norm_p/graph/graph_norm.eps}
 		\subcaption{Plots of different penalty functions} \label{fig:nom_p/comparison}
 	\end{minipage}
 	\begin{minipage}[b]{0.5\hsize}
 		\centering
-		\includegraphics[width=64mm, height = 48mm]{images/norm_p/graph/graph_norm_p.eps}
+		\includegraphics[width=72mm, height = 54mm]{images/norm_p/graph/graph_norm_p.eps}
 		\subcaption{Plots of $L_{p}$ norm for different values $p$} \label{fig:nom_p/graph_norm_p}
 	\end{minipage}
 	\caption{The images represent various plots about the $L_{p}$ norm.}
@@ -97,42 +97,57 @@ Fig. \ref{fig:comparison_p} shows the effect of changing the value of $p$ in the
 \end{figure*}
 
 \section{Adaptive Texture Map} \label{sec:adaptive}
-Low-light images usually have much noise hidden in dark regions. 
-However, noise reduction over the entire image damages detail in bright regions. 
-In addition, the preferable reflectance's gradients should be smooth in homogeneous regions while undamaged at edges. 
-Therefore, $W$ is set so that the third term performs strong noise reduction in dark and homogeneous regions, while it performs weak noise reduction in bright and textures regions. 
+The discussion centers on the effect of the adaptive texture map using as the weight of the constraint term on the reflectance. Discussed in Sec. \ref{sec:retinex}, reflectance component contains rich details. However, when the reflectance is enhanced, noise hidden in dark regions amplifies and over-enhancement cause in bright regions. Therefore, the weight which controls these problems is necessary for the constraint term on the reflectance. In addition, the preferable reflectance's gradients should be smooth in homogeneous regions while undamaged at edges and texture regions. Thus, when estimating the reflectance, the weight which can recognize more texture regions is required. Fig. \ref{fig:adaptive/classification} shows the summary of the above discussion.
+Then, the adaptive texture map $W$ is set so that the third term performs strong noise reduction in dark and homogeneous regions, while it performs weak noise reduction in bright and textures regions. 
 The formulation of $W$ is given as:
 \begin{equation}
 W_{d} = W_{B} \circ A_{d}, \label{eq: adaptive_texture}
 \end{equation}
-where $d$ represents horizontal ($h$) and vertical ($v$) directions, and $W_{B}$ represents the initial estimated weight map by inverting the normalized bright channel, and $A_{d}$ represents the texture map that effectively distinguish between homogeneous and textures regions.\par 
-In the same way as in \cite{activation}, $W_{B}$ is chosen to selectively assign different weight values to both bright and dark regions:
+where $d$ represents horizontal ($h$) and vertical ($v$) directions, and $W_{B}$ represents the initial estimated weight map by inverting the normalized bright channel, and $A_{d}$ represents the texture map that effectively distinguish between homogeneous and textures regions.\par
+In the same way as in \cite{activation}, given an observed low-light image, the adaptive texture map can selectively assign different values according to BCP since the estimated bright channel contains large values in bright regions and vice versa. 
+Thus, $W_{B}$ is given as:
 \begin{equation}
 W_{B} = 1.0 - \max_{c \in \{r, g, b\}}S^{c}. \label{eq: initial_weight}
 \end{equation}
-Furthermore, texture map is set as the inverse of the $a_{r}$-th power of the absolute value of a mean local variation (MLV) \cite{jiep} that can significantly distinguish between homogeneous regions and textures regions:
+Fig. \ref{fig:adaptive/wb} shows the image of $W_{B}$. Since smaller weight values are assigned in bright regions, $W_{B}$ performs the weaker noise reduction. In contrast, stronger noise reduction is performed in dark regions.\par
+ 
+Moreover, texture map $A_{d}$ is set as the inverse of the $a_{r}$-th power of the absolute value of a mean local variation (MLV) \cite{jiep}, so that it can significantly distinguish between homogeneous regions and texture regions:
 \begin{equation}
 A_{d} = \frac{1}{\left |\frac{1}{|\Omega|}\sum_{\Omega}\nabla_{d}{R} \right|^{a_{r}} + \epsilon}, \label{eq: mlv}
 \end{equation}
-where $a_{r} (< 1)$ is an exponential parameter to adjust the texture awareness for the reflectance. 
-Figure \ref{fig:mlv_pow} shows that tiny details are more revealing, as the value of $a_{r}$ decreases exponentially. Furthermore, the MLV of the reflectance can extract more rich gradient information than that of an observed image. Thus, by inverting the $a_{r}$-th power of the MLV of the reflectance, $A_{d}$ can adaptively assign a small value in textures regions and a large value in homogeneous regions. 
+where $a_{r} (< 1)$ is an exponential parameter to adjust the texture awareness for the reflectance.
+As shown in Fig. \ref{fig:mlv_pow}, when $a_{r}=1.0$, the texture map $A_{d}$ extracts salient edges but little texture component. In contrast, when $a_{r}=0.5$, it extract both salient edges and rich texture component. Therefore, using the texture map, $W$ performs weaker noise reduction in both edges and texture regions, on the other hand, stronger noise reduction in homogeneous regions.
+ 
 Comparing Fig. \ref{fig:wo} and \ref{fig:w}, we see that the estimated reflectance with $W$ can suppress over-enhancement in bright regions and noise amplification in dark regions. Moreover, the estimated reflectance with $W$ can reveal details and textures in spite of noise reduction. 
+% ----Classificationの図----%
+\begin{figure}[tb]
+	\centering
+	\includegraphics[width=1.0\hsize]{images/adaptive/classification.eps}
+	\caption{The image represents the classification of regions where the adaptive texture map has an impact on.} \label{fig:adaptive/classification}
+\end{figure}
+% ----Weight of BCPの図----%
+\begin{figure}[tb]
+	\centering
+	\includegraphics[width=0.5\hsize]{images/adaptive/wb.eps}
+	\caption{The image represents $W_{B}$. $W_{B}$ contains smaller values in bright regions, in contrast, larger values in dark regions.} \label{fig:adaptive/wb}
+\end{figure}
+% ----Texture Mapの図----%
 \begin{figure}[t]
 \centering
 \begin{minipage}[b]{0.49\hsize}
 \centering
-\includegraphics[height=0.55\hsize]{images/noise/MLV_10.eps}
+\includegraphics[height=0.65\hsize]{images/noise/MLV_10.eps}
 \subcaption{MLV ($a_{r}=1.0$)} \label{fig:mlv_normal}
 \end{minipage}
 \begin{minipage}[b]{0.49\hsize}
 \centering
-\includegraphics[height=0.55\hsize]{images/noise/MLV_05.eps}
+\includegraphics[height=0.65\hsize]{images/noise/MLV_05.eps}
 \subcaption{MLV ($a_{r}=0.5$)} \label{fig:mlv_pow}
 \end{minipage}
 \caption{Comparison of MLV results for different values of $a_{r}$. As the value of $a_{r}$ decreases, MLV can obtain more rich gradient information.}
 \label{fig:mlv_change}
 \end{figure}
-
+% ----Texture Mapの抑制図----%
 \begin{figure}[t]
 \centering
 \begin{minipage}[b]{0.49\hsize}
@@ -147,12 +162,6 @@ Comparing Fig. \ref{fig:wo} and \ref{fig:w}, we see that the estimated reflectan
 \end{minipage}
 \caption{Comparison of reflectance results. (a) the estimated reflectance without $W$; (b) the estimated reflectance with $W$.}
 \label{fig: noise_suppression}
-\end{figure}
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.9\hsize]{images/adaptive/classification.eps}
-	\caption{The image represents the flowchart of the proposed method.} \label{fig:adaptive/classification}
 \end{figure}
 
 \section{Solution} \label{sec:solution}

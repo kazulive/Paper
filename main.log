@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (sjis) (TeX Live 2017/W32TeX) (preloaded format=platex 2017.4.9)  8 JAN 2020 17:01
+This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (sjis) (TeX Live 2017/W32TeX) (preloaded format=platex 2017.4.9)  9 JAN 2020 17:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -543,33 +543,36 @@ Overfull \hbox (1.82047pt too wide) in paragraph at lines 92--93
  [][] 
  []
 
-[10]
+[10] [11]
+File: images/adaptive/classification.eps Graphic file (type eps)
+ <images/adaptive/classification.eps>
+File: images/adaptive/wb.eps Graphic file (type eps)
+ <images/adaptive/wb.eps>
 File: images/noise/MLV_10.eps Graphic file (type eps)
- <images/noise/MLV_10.eps>
+
+<images/noise/MLV_10.eps>
 File: images/noise/MLV_05.eps Graphic file (type eps)
  <images/noise/MLV_05.eps>
 File: images/noise/mlv_wo.eps Graphic file (type eps)
-
-<images/noise/mlv_wo.eps>
+ <images/noise/mlv_wo.eps>
 File: images/noise/mlv_reflectance.eps Graphic file (type eps)
- <images/noise/mlv_reflectance.eps>
-File: images/adaptive/classification.eps Graphic file (type eps)
 
-<images/adaptive/classification.eps> [11] [12]
+<images/noise/mlv_reflectance.eps> [12]
 
-Package mathptmx Warning: There are no bold math fonts on input line 162.
+Package mathptmx Warning: There are no bold math fonts on input line 171.
 
-[13]) [14]
+[13] [14]) [15] [16
+
+
+]
 \openout2 = `experiment.aux'.
 
  (./experiment.tex
 Chapter 4.
-) [15
+) [17
 
 
-
-
-] [16
+] [18
 
 
 ]
@@ -579,7 +582,7 @@ Chapter 4.
 No file conclusion.tex.
 \openout2 = `acknowledgement.aux'.
 
-(./acknowledgement.tex) [17
+(./acknowledgement.tex) [19
 
 
 
@@ -591,13 +594,13 @@ No file conclusion.tex.
 No file app.tex.
 \openout2 = `bib.aux'.
 
-(./bib.tex [18
+(./bib.tex [20
 
 
 
 
 
-]) [19]
+]) [21]
 \openout2 = `bio.aux'.
 
 
@@ -606,12 +609,12 @@ No file bio.tex.
 (./experiment.aux) (./conclusion.aux) (./acknowledgement.aux) (./app.aux)
 (./bib.aux) (./bio.aux)) ) 
 Here is how much of TeX's memory you used:
- 3643 strings out of 493671
- 52700 string characters out of 6151255
+ 3646 strings out of 493671
+ 52745 string characters out of 6151255
  124843 words of memory out of 5000000
- 7058 multiletter control sequences out of 15000+600000
+ 7060 multiletter control sequences out of 15000+600000
  43664 words of font info for 132 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  42i,16n,41p,1112b,600s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on main.dvi (23 pages, 49148 bytes).
+Output written on main.dvi (25 pages, 50772 bytes).
