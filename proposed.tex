@@ -116,9 +116,9 @@ Moreover, texture map $A_{d}$ is set as the inverse of the $a_{r}$-th power of t
 A_{d} = \frac{1}{\left |\frac{1}{|\Omega|}\sum_{\Omega}\nabla_{d}{R} \right|^{a_{r}} + \epsilon}, \label{eq: mlv}
 \end{equation}
 where $a_{r} (< 1)$ is an exponential parameter to adjust the texture awareness for the reflectance.
-As shown in Fig. \ref{fig:mlv_pow}, when $a_{r}=1.0$, the texture map $A_{d}$ extracts salient edges but little texture component. In contrast, when $a_{r}=0.5$, it extract both salient edges and rich texture component. Therefore, using the texture map, $W$ performs weaker noise reduction in both edges and texture regions, on the other hand, stronger noise reduction in homogeneous regions.
- 
-Comparing Fig. \ref{fig:wo} and \ref{fig:w}, we see that the estimated reflectance with $W$ can suppress over-enhancement in bright regions and noise amplification in dark regions. Moreover, the estimated reflectance with $W$ can reveal details and textures in spite of noise reduction. 
+As shown in Fig. \ref{fig:mlv_change}, when $a_{r}=1.0$, the texture map $A_{d}$ extracts salient edges but little texture component. In contrast, when $a_{r}=0.5$, it extract both salient edges and rich texture component. Therefore, using the texture map, $W$ performs weaker noise reduction in both edges and texture regions, on the other hand, stronger noise reduction in homogeneous regions.\par
+Here, the discussion centers on the effectiveness of the adaptive texture map using Fig. \ref{fig:adaptive/effectiveness}.
+As shown in the yellow and green square, the estimated reflectance with $W$ can suppress over-enhancement in bright regions and noise amplification in dark regions more than without $W$. This is because $W_{B}$ can significantly assign different values between bright and dark regions. 
 % ----Classificationの図----%
 \begin{figure}[tb]
 	\centering
@@ -161,7 +161,7 @@ Comparing Fig. \ref{fig:wo} and \ref{fig:w}, we see that the estimated reflectan
 \subcaption{Reflectance with $W$} \label{fig:w}
 \end{minipage}
 \caption{Comparison of reflectance results. (a) the estimated reflectance without $W$; (b) the estimated reflectance with $W$.}
-\label{fig: noise_suppression}
+\label{fig:adaptive/effectiveness}
 \end{figure}
 
 \section{Solution} \label{sec:solution}
