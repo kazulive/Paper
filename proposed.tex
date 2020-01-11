@@ -2,8 +2,8 @@
 \label{sec:proposed}
 In this section, the discussion centers on the proposed method which improves the problems described in Sec.\ref{sec:problems}.
 First, the $L_{2}$ - $L_{p}$ variational retinex model which further considers the feature of the reflectance and illumination is introduced in Sec. \ref{sec:L2-LP}. 
-Second, adaptive texture map which adaptively constraint noise amplification in dark regions and over-enhancement in bright regions is described in Sec. \ref{sec:adaptive}. 
-Finally, the effectiveness of the proposed method is shown in comparison with the related work by using the output of some images in Sec. \ref{sec:analysis}.\par
+Next, adaptive texture map which adaptively constraint noise amplification in dark regions and over-enhancement in bright regions is described in Sec. \ref{sec:adaptive}. 
+Finally, the solution of the proposed minimization optimization equation is mentioned in Sec. \ref{sec:solution}.\par
 Fig. \ref{fig:proposed/flowchart} shows the flowchart of the proposed method.
 To explain the flow of the proposed method briefly, the proposed method obtains a low-light image and the initialized illumination which is called the bright channel prior. Next, the proposed method converses a low-light image to HSV-Color scale and extract only value (V) channel. The proposed method iteratively solves the sub-problems related with the reflectance and illumination and gets their component which meet the constraints are appropriate for each component. Finally, the proposed method multiply the estimate reflectance and illumination, converses the obtained enhanced image to RGB-Color space.
 
@@ -119,6 +119,11 @@ where $a_{r} (< 1)$ is an exponential parameter to adjust the texture awareness 
 As shown in Fig. \ref{fig:mlv_change}, when $a_{r}=1.0$, the texture map $A_{d}$ extracts salient edges but little texture component. In contrast, when $a_{r}=0.5$, it extract both salient edges and rich texture component. Therefore, using the texture map, $W$ performs weaker noise reduction in both edges and texture regions, on the other hand, stronger noise reduction in homogeneous regions.\par
 Here, the discussion centers on the effectiveness of the adaptive texture map using Fig. \ref{fig:adaptive/effectiveness}.
 As shown in the yellow and green square, the estimated reflectance with $W$ can suppress over-enhancement in bright regions and noise amplification in dark regions more than without $W$. This is because $W_{B}$ can significantly assign different values between bright and dark regions. 
+Next, in order to confirm the effectiveness of texture map $A_{d}$, the edge magnitude in the red square is calculated:
+\begin{equation}
+M(h, v) = \sqrt{G_{h} ^{2}+ G_{v}^{2}}, \label{eq:maginitude}
+\end{equation}
+where $G_{h}$, $G_{v}$ represent the horizontal-vertical gradient image respectively. Fig.\ref{fig:adaptive/edge_magnitude} shows the plots of average v-axis edge magnitude. It can be seen the average gradient magnitude with $W$ has larger values and the values fluctuate more rapidly than without $W$. Therefore, the texture map $A_{d}$ contributes to the awareness of textures in the estimated reflectance.
 % ----Classificationの図----%
 \begin{figure}[tb]
 	\centering
@@ -152,16 +157,22 @@ As shown in the yellow and green square, the estimated reflectance with $W$ can 
 \centering
 \begin{minipage}[b]{0.49\hsize}
 \centering
-\includegraphics[height=0.65\hsize]{images/noise/mlv_wo.eps}
+\includegraphics[width=60mm, height=60mm]{images/adaptive/without.eps}
 \subcaption{Reflectance w/o $W$} \label{fig:wo}
 \end{minipage}
 \begin{minipage}[b]{0.49\hsize}
 \centering
-\includegraphics[height=0.65\hsize]{images/noise/mlv_reflectance.eps}
+\includegraphics[width=60mm, height=60mm]{images/adaptive/with.eps}
 \subcaption{Reflectance with $W$} \label{fig:w}
 \end{minipage}
 \caption{Comparison of reflectance results. (a) the estimated reflectance without $W$; (b) the estimated reflectance with $W$.}
 \label{fig:adaptive/effectiveness}
+\end{figure}
+% ----Edge Magnitudeの図----%
+\begin{figure}[tb]
+	\centering
+	\includegraphics[width=0.5\hsize]{images/adaptive/graph_edge.eps}
+	\caption{The image represents the plots of the average edge magnitude.} \label{fig:adaptive/edge_magnitude}
 \end{figure}
 
 \section{Solution} \label{sec:solution}
@@ -173,25 +184,28 @@ The minimization optimization problem (\ref{eq:proposed/equation}) can be solved
 I_{k} = \argmin_{I}\|R_{k-1} \circ I - S\|_{2}^{2} + \alpha\|U \circ \nabla{I}\|_{2}^{2} 
 +\lambda \|I - B\|_{2}^{2}. \label{eq: i_subproblem}
 \end{equation}
-We reduce the equation (\ref{eq: i_subproblem}) to a classic least square problem:
+The equation (\ref{eq: i_subproblem}) is transferred to a classic least square problem:
 \begin{equation}
-i_{k} = \argmin_{i} \|r_{k-1} \hat{i} - s\|_{2}^{2} + \alpha\|\hat{u}Di\|_{2}^{2} + \lambda \|i - b\|_{2}^{2}, \label{eq:classic_i_subproblem}
+i_{k} = \argmin_{i} \|r_{k-1} i - s\|_{2}^{2} + \alpha\|uDi\|_{2}^{2} + \lambda \|i - b\|_{2}^{2}, \label{eq:classic_i_subproblem}
 \end{equation}
-where $i$ is the vectorized format of $I$ and $\hat{i}$ represents a diagonal matrix with $i$ as its entries, and $D$ contains $D_{h}$ and $D_{v}$, which are the Toeplitz matrices from the discrete gradient operators with forward difference.
+where $i$ is the vectorized format of $I$ and $D$ contains $D_{h}$ and $D_{v}$, which are the Toeplitz matrices from the discrete gradient operators with forward difference.
 The same notation is used for other matrices (r, s, b corresponds to R, S, and B, respectively). By differentiating equation (\ref{eq:classic_i_subproblem}) with respect to $i$, and setting the derivative to $0$, we have the following solution:
 \begin{equation}
-i_{k+1} = (\hat{r}_{k-1}\hat{r}_{k-1}^{T} + \alpha D^{T}\hat{u}D + \lambda{1})^{-1} (\hat{r}_{k-1}^{T}s + \lambda{\hat{b}}). \label{eq: i_solution}
+i_{k+1} = (r_{k-1}r_{k-1}^{T} + \alpha D^{T}uD + \lambda{1})^{-1} (r_{k-1}^{T}s + \lambda{b}). \label{eq: i_solution}
 \end{equation}
-Then, we reformulate the obtained $i_{k}$ into matrix format $I_{k}$.
+Then, the obtained $i_{k}$ is reformulated into matrix format $I_{k}$.
 \item \textbf{$R$ sub-problem:} After acquiring $I_{k}$ from the above solution, the joint optimization (\ref{eq:proposed/equation}) related to $R$ becomes similar to that of $I$:
 \begin{equation}
 R_{k} = \argmin_{R}\|R \circ I_{k} - S\|_{2}^{2} + \beta\|W \circ \nabla{R}\|_{2}^{2}. \label{eq: r_subproblem}
 \end{equation}
-In the same way as in the former derivation, we provide the solution of $R$ as follows:
+In the same way as in the former derivation, the solution of $R$ is provided as follows:
 \begin{equation}
-r_{k} = (\hat{i}_{k}\hat{i}_{k}^{T} + \beta D^{T}\hat{w}D)^{-1} (\hat{i}_{k}^{T}s). \label{eq: solution_r_subproblem}
+r_{k} = \argmin_{r} \|ri_{k} - s\|_{2}^{2} + \beta\|wDr\|_{2}^{2}, \label{eq:classic_r_subproblem}
 \end{equation}
-Similarly, we reformulate the obtained $r_{k}$ into matrix format $R_{k}$.
+\begin{equation}
+r_{k} = (i_{k}i_{k}^{T} + \beta D^{T}wD)^{-1} (i_{k}^{T}s). \label{eq: solution_r_subproblem}
+\end{equation}
+Similarly, the obtained $r_{k}$ is reformulated into matrix format $R_{k}$.
 \end{enumerate}
 The values of $I$ and $R$ are updated until $\|I_{k}-I_{k-1}\|/\|I_{k-1}\| \leq \varepsilon$ and $\|R_{k}-R_{k-1}\|/\|R_{k-1}\| \leq \varepsilon$ are simultaneously satisfied. After the estimation of  the reflectance and illumination, a Gamma correction operation is adopted to adjust the illumination. Therefore, the final enhanced image is given as $ S_{enhanced} = R \circ I^{\frac{1}{\gamma^{'}}}, \label{eq_final}$ where the empirical parameter $\gamma^{'}$ is set as 2.2. To preserve color information, the Gamma correction is performed in the HSV domain.
-\section{Effectiveness of the proposed method} \label{sec:analysis}
+%\section{Effectiveness of the proposed method} \label{sec:analysis}
