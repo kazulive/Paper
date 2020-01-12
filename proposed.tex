@@ -1,11 +1,11 @@
 \chapter{Proposed Method}
 \label{sec:proposed}
 In this section, the discussion centers on the proposed method which improves the problems described in Sec.\ref{sec:problems}.
-First, the $L_{2}$ - $L_{p}$ variational retinex model which further considers the feature of the reflectance and illumination is introduced in Sec. \ref{sec:L2-LP}. 
-Next, adaptive texture map which adaptively constraint noise amplification in dark regions and over-enhancement in bright regions is described in Sec. \ref{sec:adaptive}. 
+First, a mixture $L_{2}$ - $L_{p}$ variational retinex model which further considers the feature of the reflectance and illumination is introduced in Sec. \ref{sec:L2-LP}. 
+Next, an adaptive texture map which selectively constrain noise amplification in dark regions and over-enhancement in bright regions is described in Sec. \ref{sec:adaptive}. 
 Finally, the solution of the proposed minimization optimization equation is mentioned in Sec. \ref{sec:solution}.\par
 Fig. \ref{fig:proposed/flowchart} shows the flowchart of the proposed method.
-To explain the flow of the proposed method briefly, the proposed method obtains a low-light image and the initialized illumination which is called the bright channel prior. Next, the proposed method converses a low-light image to HSV-Color scale and extract only value (V) channel. The proposed method iteratively solves the sub-problems related with the reflectance and illumination and gets their component which meet the constraints are appropriate for each component. Finally, the proposed method multiply the estimate reflectance and illumination, converses the obtained enhanced image to RGB-Color space.
+To explain the flow of the proposed method briefly, the proposed method obtains a low-light image and an initialized illumination which is called the bright channel prior. Next, the proposed method converses a low-light image to HSV-Color scale and extract only value (V) channel. The proposed method iteratively solves sub-problems related with the reflectance and illumination and gets their component which meet the constraints are appropriate for each component. Finally, the proposed method multiply the estimated reflectance and illumination, converses the obtained enhanced image to RGB-Color space.
 
 %----提案手法のフローチャート---- %
 \begin{figure}[htbp]
@@ -14,13 +14,14 @@ To explain the flow of the proposed method briefly, the proposed method obtains 
 	\caption{The image represents the flowchart of the proposed method. (i)The proposed method changes the constraint terms further considered the characteristics for each component. (ii)The proposed method generates adaptive texture map to constrain noise  amplification and over-enhancement in the estimated reflectance. } \label{fig:proposed/flowchart}
 \end{figure}
 
-\section{L2-LP Variational Model} \label{sec:L2-LP}
-The conventional methods adopt the $L_{1}$ norm to the constraint term on the reflectance, but the fine detail of the estimated reflectance are susceptible to be damaged. Furthermore, by adopting the $L_{2}$ norm to the constraint term on the illumination, the estimated illumination over-smooths and loss the structure information. Therefore, the proposed method adopts $L_{2}$ - $L_{P}$ norm regularization to each constraint term in order to estimate the reflectance as much as possible to preserve tiny details and estimate the illumination as much as possible to keep the structure information while removing texture component.
+\section{Mixture L2-LP Variational Model} \label{sec:L2-LP}
+The conventional methods adopt a $L_{1}$ norm to the constraint term on the reflectance, but the fine detail of the estimated reflectance are susceptible to be damaged. Furthermore, by adopting a $L_{2}$ norm to the constraint term on the illumination, the estimated illumination over-smooths and loss the structure information. Therefore, the proposed method adopts $L_{2}$ - $L_{P}$ norm regularization to each constraint term in order to estimate the reflectance as much as possible to preserve fine detail and estimate the illumination as much as possible to keep the structure information while removing texture component.
 The new joint optimization equation is given as:
 \begin{equation}
 E(I, R) = \argmin_{R, I} \|R \circ I - S\|_{2}^{2} + \alpha \left \|\frac{\nabla{I}}{\frac{1}{\Omega}\Sigma_{\Omega}\nabla{I}+\epsilon}\right\|_{p}^{p} + \beta \|W \circ \nabla{R}\|_{2}^{2} + \gamma \|I - B\|_{2}^{2}, \label{eq:proposed/equation}
 \end{equation}
-where $\| \cdot \|_{p}$ denotes the $L_{p}$ norm regularization term $(0 < p \leq 2)$, and $W$ is adaptive texture map related to the reflectance $R$. As described in \cite{l2-lp}, a block coordinate descent \cite{block} is used in order to find an optimal solution to the non-convex objective function $(\ref{eq:proposed/equation})$. Since the $L_{p}$ regularization term causes non-smooth optimization, the proposed method adopts an iteratively re-weighted least square (IRLS) method \cite{iterate} and rewrite the second term in $(\ref{eq:proposed/equation})$ as:
+where $\| \cdot \|_{p}$ denotes the $L_{p}$ norm regularization term $(0 < p \leq 2)$, and $W$ is the adaptive texture map related to the reflectance $R$.\par
+As described in \cite{l2-lp}, a block coordinate descent \cite{block} is used in order to find an optimal solution to the non-convex objective function $(\ref{eq:proposed/equation})$. Since the $L_{p}$ regularization term causes non-smooth optimization, the proposed method adopts an iteratively re-weighted least square (IRLS) method \cite{iterate} and rewrite the second term in $(\ref{eq:proposed/equation})$ as:
 \begin{equation}
 \left \|\frac{\nabla{I}}{\frac{1}{\Omega}\Sigma_{\Omega}\nabla{I}+\epsilon}\right\|^{p} = \|U \circ \nabla{I}\|^{2}, \label{eq:approximation}
 \end{equation}
@@ -43,8 +44,8 @@ U &= \left \{
   	\end{array}
 \right. \label{eq:lp_shape}
 \end{align}
-where the variable $u$ is only approximate variable. This is because the Eq. \ref{eq:approximation} uses a $L_{2}$ norm format $\Phi(\frac{\nabla{I}}{\frac{1}{\Omega}\Sigma_{\Omega}\nabla{I}+\epsilon};\xi)$ based on \cite{l0-sparse} to approximate the $L_{0} $ norm function. As can be seen in Fig. \ref{fig:nom_p/comparison}, the red curve can approximate the most sparse $L_{0}$ function. Therefore, the proposed method can remove fine textures and preserve meaningful salient structures in the estimated illumination. As shown in Fig. \ref{fig:nom_p/graph_norm_p}, with the decease of the value $\xi$, the $L_{p}$ norm function is getting close to the $L_{0}$ function. Therefore, large-$\xi$ are more convex-like and easy to optimize, in contrast, small-$\xi$ are more steep and difficult to optimize.\par
-Fig. \ref{fig:comparison_p} shows the effect of changing the value of $p$ in the range ($0 < p \leq 2$) in the estimated illumination. As the value of $p$ decreases, the estimated illumination leaves smooth and texture-less. Concomitantly, the estimated reflectance contains more rich textures and details. In particular, when $p=0$, some salient structure information in the estimated illumination may be lost too much, because the $L_{0}$ norm has strong sparsity. 
+where the variable $u$ is only approximate variable. This is because the Eq. \ref{eq:approximation} uses a $L_{2}$ norm format $\Phi(\frac{\nabla{I}}{\frac{1}{\Omega}\Sigma_{\Omega}\nabla{I}+\epsilon};\xi)$ based on \cite{l0-sparse} to approximate the $L_{0} $ norm function. As can be seen in Fig. \ref{fig:nom_p/comparison}, the red curve can approximate the most sparse $L_{0}$ function. Therefore, the proposed method can remove fine textures detail and preserve meaningful salient structures in the estimated illumination. As shown in Fig. \ref{fig:nom_p/graph_norm_p}, with the decease of the value $\xi$, the $L_{p}$ norm function is getting close to the $L_{0}$ function. Therefore, large-$\xi$ are more convex-like and easy to optimize, in contrast, small-$\xi$ are more steep and difficult to optimize.\par
+Fig. \ref{fig:comparison_p} shows the effect of changing the value of $p$ in the range ($0 < p \leq 2$) in the estimated illumination. As the value of $p$ decreases, the estimated illumination leaves smooth and texture-less. Concomitantly, the estimated reflectance contains more rich textures detail. In particular, when $p=0$, some salient structure information in the estimated illumination may be lost too much, because the $L_{0}$ norm has strong sparsity. 
 %----Lpノルムの概形----
 \begin{figure}[htbp]
 \vspace{-15pt}
@@ -58,7 +59,7 @@ Fig. \ref{fig:comparison_p} shows the effect of changing the value of $p$ in the
 		\includegraphics[width=72mm, height = 54mm]{images/norm_p/graph/graph_norm_p.eps}
 		\subcaption{Plots of $L_{p}$ norm for different values $p$} \label{fig:nom_p/graph_norm_p}
 	\end{minipage}
-	\caption{The images represent various plots about the $L_{p}$ norm.}
+	\caption{The images represent various plots about the $L_{p}$ norm, when $p \approx 0$.}
 	\label{fig:graph_lp}
 \end{figure}
 %----ノルムpによる推定比較---- %
@@ -97,29 +98,29 @@ Fig. \ref{fig:comparison_p} shows the effect of changing the value of $p$ in the
 \end{figure*}
 
 \section{Adaptive Texture Map} \label{sec:adaptive}
-The discussion centers on the effect of the adaptive texture map using as the weight of the constraint term on the reflectance. Discussed in Sec. \ref{sec:retinex}, reflectance component contains rich details. However, when the reflectance is enhanced, noise hidden in dark regions amplifies and over-enhancement cause in bright regions. Therefore, the weight which controls these problems is necessary for the constraint term on the reflectance. In addition, the preferable reflectance's gradients should be smooth in homogeneous regions while undamaged at edges and texture regions. Thus, when estimating the reflectance, the weight which can recognize more texture regions is required. Fig. \ref{fig:adaptive/classification} shows the summary of the above discussion.
+The discussion centers on the effect of the adaptive texture map using as the weight of the constraint term on the reflectance. Discussed in Sec. \ref{sec:retinex}, reflectance component contains rich details. However, when a low-light image is enhanced, noise hidden in dark regions amplifies and over-enhancement cause in bright regions in the estimated reflectance. Therefore, the weight which controls noise amplification and over-enhancement is necessary for the constraint term on the reflectance. In addition, the preferable reflectance's gradients should be smooth in homogeneous regions while undamaged at edges and texture regions. Thus, when estimating the reflectance, the weight which can recognize more texture regions is required. Fig. \ref{fig:adaptive/classification} shows the summary of the above discussion.
 Then, the adaptive texture map $W$ is set so that the third term performs strong noise reduction in dark and homogeneous regions, while it performs weak noise reduction in bright and textures regions. 
 The formulation of $W$ is given as:
 \begin{equation}
 W_{d} = W_{B} \circ A_{d}, \label{eq: adaptive_texture}
 \end{equation}
-where $d$ represents horizontal ($h$) and vertical ($v$) directions, and $W_{B}$ represents the initial estimated weight map by inverting the normalized bright channel, and $A_{d}$ represents the texture map that effectively distinguish between homogeneous and textures regions.\par
-In the same way as in \cite{activation}, given an observed low-light image, the adaptive texture map can selectively assign different values according to BCP since the estimated bright channel contains large values in bright regions and vice versa. 
+where $d$ represents horizontal ($h$) and vertical ($v$) directions, and $W_{B}$ represents an initial estimated weight map by inverting the normalized bright channel, and $A_{d}$ represents a texture map that effectively distinguish between homogeneous and textures regions.\par
+In the same way as in \cite{activation}, given an observed low-light image, $W_{B}$ can selectively assign different values according to BCP since the estimated bright channel contains large values in bright regions and vice versa. 
 Thus, $W_{B}$ is given as:
 \begin{equation}
 W_{B} = 1.0 - \max_{c \in \{r, g, b\}}S^{c}. \label{eq: initial_weight}
 \end{equation}
 Fig. \ref{fig:adaptive/wb} shows the image of $W_{B}$. Since smaller weight values are assigned in bright regions, $W_{B}$ performs the weaker noise reduction. In contrast, stronger noise reduction is performed in dark regions.\par
  
-Moreover, texture map $A_{d}$ is set as the inverse of the $a_{r}$-th power of the absolute value of a mean local variation (MLV) \cite{jiep}, so that it can significantly distinguish between homogeneous regions and texture regions:
+Moreover, the texture map $A_{d}$ is set as the inverse of the $a_{r}$-th power of the absolute value of a mean local variation (MLV) \cite{jiep}, so that it can significantly distinguish between homogeneous regions and textures regions:
 \begin{equation}
 A_{d} = \frac{1}{\left |\frac{1}{|\Omega|}\sum_{\Omega}\nabla_{d}{R} \right|^{a_{r}} + \epsilon}, \label{eq: mlv}
 \end{equation}
-where $a_{r} (< 1)$ is an exponential parameter to adjust the texture awareness for the reflectance.
+where $a_{r} (< 1)$ is an exponential parameter to adjust the awareness of textures for the reflectance.
 As shown in Fig. \ref{fig:mlv_change}, when $a_{r}=1.0$, the texture map $A_{d}$ extracts salient edges but little texture component. In contrast, when $a_{r}=0.5$, it extract both salient edges and rich texture component. Therefore, using the texture map, $W$ performs weaker noise reduction in both edges and texture regions, on the other hand, stronger noise reduction in homogeneous regions.\par
 Here, the discussion centers on the effectiveness of the adaptive texture map using Fig. \ref{fig:adaptive/effectiveness}.
-As shown in the yellow and green square, the estimated reflectance with $W$ can suppress over-enhancement in bright regions and noise amplification in dark regions more than without $W$. This is because $W_{B}$ can significantly assign different values between bright and dark regions. 
-Next, in order to confirm the effectiveness of texture map $A_{d}$, the edge magnitude in the red square is calculated:
+As shown in the yellow and green square, the estimated reflectance with $W$ can suppress noise amplification in dark regions and over-enhancement in bright regions more than without $W$. This is because $W_{B}$ can significantly assign different values between dark and bright regions. 
+Next, in order to confirm the effectiveness of the texture map $A_{d}$, the edge magnitude in the red square is calculated:
 \begin{equation}
 M(h, v) = \sqrt{G_{h} ^{2}+ G_{v}^{2}}, \label{eq:maginitude}
 \end{equation}
@@ -208,4 +209,31 @@ r_{k} = (i_{k}i_{k}^{T} + \beta D^{T}wD)^{-1} (i_{k}^{T}s). \label{eq: solution_
 Similarly, the obtained $r_{k}$ is reformulated into matrix format $R_{k}$.
 \end{enumerate}
 The values of $I$ and $R$ are updated until $\|I_{k}-I_{k-1}\|/\|I_{k-1}\| \leq \varepsilon$ and $\|R_{k}-R_{k-1}\|/\|R_{k-1}\| \leq \varepsilon$ are simultaneously satisfied. After the estimation of  the reflectance and illumination, a Gamma correction operation is adopted to adjust the illumination. Therefore, the final enhanced image is given as $ S_{enhanced} = R \circ I^{\frac{1}{\gamma^{'}}}, \label{eq_final}$ where the empirical parameter $\gamma^{'}$ is set as 2.2. To preserve color information, the Gamma correction is performed in the HSV domain.
-%\section{Effectiveness of the proposed method} \label{sec:analysis}
+
+Fig. \ref{fig:proposed/output} shows the result of the proposed method. The proposed method can estimate the illumination as much as possible to smooth and keep the meaningful structure information while removing much textures detail and estimate the reflectance as much as possible to clarify fine textures detail while suppressing noise amplification in dark regions and over-enhancement in bright regions. Therefore, it can be seen the proposed method naturally enhances low-light images.
+%----提案手法の結果の図---- %
+\begin{figure}[htbp]
+\centering
+	\begin{minipage}[b]{0.49\hsize}
+		\centering
+		\includegraphics[width=62.5mm]{images/proposed/input.eps}
+		\subcaption{Low-Light Image} \label{fig:proposed/input}
+	\end{minipage}
+	\begin{minipage}[b]{0.49\hsize}
+		\centering
+		\includegraphics[width=62.5mm]{images/proposed/illumination.eps}
+		\subcaption{Illumination} \label{fig:proposed/illumination}
+	\end{minipage}
+	\begin{minipage}[b]{0.49\hsize}
+		\centering
+		\includegraphics[width=62.5mm]{images/proposed/reflectance.eps}
+		\subcaption{Reflectance} \label{fig:proposed/reflectance}
+	\end{minipage}
+	\begin{minipage}[b]{0.49\hsize}
+		\centering
+		\includegraphics[width=62.5mm]{images/proposed/output.eps}
+		\subcaption{Enhanced Image} \label{fig:proposed/enhanced}
+	\end{minipage}
+	\caption{The images represent the result of the proposed method.}
+	\label{fig:proposed/output}
+\end{figure}
