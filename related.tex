@@ -36,7 +36,7 @@ The conventional Retinex-based enhancement methods such as \cite{ssr}, \cite{msr
 \end{equation}
 where $\ast$ represents the convolution operator, $G$ is the Gaussian low-pass filter. This method assumes that illumination can be estimated by the Gaussian low-pass filtered version of an observed image. Moreover, the reflectance is computed by subtracting the estimated illumination from an observed image. However, this method generates the halo effect around the edges of object according to the size of the Gaussian low-pass filter. In addition, as shown in Fig. \ref{fig:msr}, this method cause over-enhancement and much noise in the estimated reflectance. 
 
-\begin{figure}
+\begin{figure}[tb]
 \begin{minipage}[b]{0.5\hsize}
 		\centering
 		\includegraphics[height=0.6\hsize]{images/msr/input.eps}
@@ -65,7 +65,7 @@ The first term $\|R \circ I - S\|_{2}^{2}$, which corresponds to L2 data fidelit
 This method demonstrated the linear domain model is better than the log-transformed domain model in preserving naturalness. As shown in Fig. \ref{fig:variational/srie}, this method employs the third term which minimizes the difference between $I$ and $I_{0}$ for the sake of suppression of over-enhancement in the estimated reflectance. Moreover, this method can suppress noise amplification due to the $L_{1}$ norm regularization on the reflectance in the estimated reflectance.
 
 %----SRIEの図---- %
-\begin{figure}[htbp]
+\begin{figure}[tb]
 	\begin{minipage}[b]{0.5\hsize}
 		\centering
 		\includegraphics[width=62.5mm]{images/variational/input.eps}
@@ -113,7 +113,7 @@ The edge/structure preserving smoothing property of the LVD can be explained int
 \end{itemize}
 To quantitatively analyze the effectiveness of the distinction of the LVD measure, Fig.\ref{fig:jiep/analysis} shows the average value of the LVD in the local patches. The blue regions represent textures and the green regions represent structures. As shown in Fig.\ref{fig:jiep/analysis}, there is a clear difference between texture and structure regions.
 
-\begin{figure}[t]
+\begin{figure}[tb]
 	\centering
 	\includegraphics[width=0.8\hsize]{images/jiep/analysis/analysis.eps}
 	\caption{The images represent local variation deviation for different patches. $\bar{\mathcal{R}}$ is the average of variation deviation in the local patches. The local variation deviation surprisingly distinguish textures (blue regions) and structures (green regions).
@@ -127,7 +127,7 @@ Thanks to the performance of the LVD, Cai replaced the constraint term on the il
 where $\alpha$, $\beta$, $\gamma$ are three positive parameters and $B$ ($B = max_{\Omega}(max_{c \in \{r, g, b\}}S_{c})$) represents the bright channel prior (BCP) of an observed image $S$. As shown in Fig.\ref{fig:jiep/example}, the estimated illumination removes texture component while preserving the structure information. Thus, in the estimated reflectance, JieP significantly suppresses the awareness of halo effect along with edge regions. Moreover, more textures detail reveal in the estimated reflectance.
 
 %----JiePの図---- %
-\begin{figure}[t]
+\begin{figure}[tb]
 	\begin{minipage}[b]{0.5\hsize}
 		\centering
 		\includegraphics[width=62.5mm]{images/jiep/input.eps}
@@ -168,7 +168,7 @@ This method can significantly take consideration of the constraint term on the i
 \end{itemize}
 
 %----Problemsの図---- %
-\begin{figure}[t]
+\begin{figure}[tb]
 	\begin{minipage}[b]{1.0\hsize}
 		\centering
 		\includegraphics[width=0.65\hsize]{images/problems/srie/reflectance.eps}

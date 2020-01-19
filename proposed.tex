@@ -8,7 +8,7 @@ Fig. \ref{fig:proposed/flowchart} shows the flowchart of the proposed method.
 To explain the flow of the proposed method briefly, the proposed method obtains a low-light image and an initialized illumination which is called the bright channel prior. Next, the proposed method converses a low-light image to HSV-Color scale and extract only value (V) channel. The proposed method iteratively solves sub-problems related with the reflectance and illumination and gets their component which meet the constraints are appropriate for each component. Finally, the proposed method multiply the estimated reflectance and illumination, converses the obtained enhanced image to RGB-Color space.
 
 %----提案手法のフローチャート---- %
-\begin{figure}[htbp]
+\begin{figure}[tb]
 	\centering
 	\includegraphics[width=1.0\hsize]{images/proposed/flowchart.eps}
 	\caption{The image represents the flowchart of the proposed method. (i)The proposed method changes the constraint terms further considered the characteristics for each component. (ii)The proposed method generates adaptive texture map to constrain noise  amplification and over-enhancement in the estimated reflectance. } \label{fig:proposed/flowchart}
@@ -47,7 +47,7 @@ U &= \left \{
 where the variable $u$ is only approximate variable. This is because the Eq. \ref{eq:approximation} uses a $L_{2}$ norm format $\Phi(\frac{\nabla{I}}{\frac{1}{\Omega}\Sigma_{\Omega}\nabla{I}+\epsilon};\xi)$ based on \cite{l0-sparse} to approximate the $L_{0} $ norm function. As can be seen in Fig. \ref{fig:nom_p/comparison}, the red curve can approximate the most sparse $L_{0}$ function. Therefore, the proposed method can remove fine textures detail and preserve meaningful salient structures in the estimated illumination. As shown in Fig. \ref{fig:nom_p/graph_norm_p}, with the decease of the value $\xi$, the $L_{p}$ norm function is getting close to the $L_{0}$ function. Therefore, large-$\xi$ are more convex-like and easy to optimize, in contrast, small-$\xi$ are more steep and difficult to optimize.\par
 Fig. \ref{fig:comparison_p} shows the effect of changing the value of $p$ in the range ($0 < p \leq 2$) in the estimated illumination. As the value of $p$ decreases, the estimated illumination leaves smooth and texture-less. Concomitantly, the estimated reflectance contains more rich textures detail. In particular, when $p=0$, some salient structure information in the estimated illumination may be lost too much, because the $L_{0}$ norm has strong sparsity. 
 %----Lpノルムの概形----
-\begin{figure}[htbp]
+\begin{figure}[tb]
 \vspace{-15pt}
 	\begin{minipage}[b]{0.5\hsize}
 		\centering
@@ -63,7 +63,7 @@ Fig. \ref{fig:comparison_p} shows the effect of changing the value of $p$ in the
 	\label{fig:graph_lp}
 \end{figure}
 %----ノルムpによる推定比較---- %
-\begin{figure*}[htbp]
+\begin{figure*}[tb]
 \centering
 	\begin{minipage}[b]{0.32\hsize}
 	\centering
@@ -138,7 +138,7 @@ where $G_{h}$, $G_{v}$ represent the horizontal-vertical gradient image respecti
 	\caption{The image represents $W_{B}$. $W_{B}$ contains smaller values in bright regions, in contrast, larger values in dark regions.} \label{fig:adaptive/wb}
 \end{figure}
 % ----Texture Mapの図----%
-\begin{figure}[t]
+\begin{figure}[tb]
 \centering
 \begin{minipage}[b]{0.49\hsize}
 \centering
@@ -154,7 +154,7 @@ where $G_{h}$, $G_{v}$ represent the horizontal-vertical gradient image respecti
 \label{fig:mlv_change}
 \end{figure}
 % ----Texture Mapの抑制図----%
-\begin{figure}[t]
+\begin{figure}[tb]
 \centering
 \begin{minipage}[b]{0.49\hsize}
 \centering
@@ -212,7 +212,7 @@ The values of $I$ and $R$ are updated until $\|I_{k}-I_{k-1}\|/\|I_{k-1}\| \leq 
 
 Fig. \ref{fig:proposed/output} shows the result of the proposed method. The proposed method can estimate the illumination as much as possible to smooth and keep the meaningful structure information while removing much textures detail and estimate the reflectance as much as possible to clarify fine textures detail while suppressing noise amplification in dark regions and over-enhancement in bright regions. Therefore, it can be seen the proposed method naturally enhances low-light images.
 %----提案手法の結果の図---- %
-\begin{figure}[htbp]
+\begin{figure}[tb]
 \centering
 	\begin{minipage}[b]{0.49\hsize}
 		\centering

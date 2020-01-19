@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (sjis) (TeX Live 2017/W32TeX) (preloaded format=platex 2017.4.9)  12 JAN 2020 22:32
+This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (sjis) (TeX Live 2017/W32TeX) (preloaded format=platex 2017.4.9)  13 JAN 2020 19:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -51,6 +51,23 @@ File: dvipdfmx.def 2016/07/11 v4.12 LaTeX color/graphics driver for dvipdfmx (L
 ))
 \Gin@req@height=\dimen119
 \Gin@req@width=\dimen120
+)
+(c:/w32tex/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(c:/w32tex/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: dvipdfmx.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
 (c:/w32tex/share/texmf-dist/tex/latex/here/here.sty)
 (c:/w32tex/share/texmf-dist/tex/latex/float/float.sty
@@ -543,7 +560,7 @@ Overfull \hbox (1.82047pt too wide) in paragraph at lines 93--94
  [][] 
  []
 
-[10] [11] [12]
+[10] [11]
 File: images/adaptive/classification.eps Graphic file (type eps)
  <images/adaptive/classification.eps>
 File: images/adaptive/wb.eps Graphic file (type eps)
@@ -560,7 +577,7 @@ File: images/adaptive/with.eps Graphic file (type eps)
  <images/adaptive/with.eps>
 File: images/adaptive/graph_edge.eps Graphic file (type eps)
 
-<images/adaptive/graph_edge.eps>
+<images/adaptive/graph_edge.eps> [12]
 
 Package mathptmx Warning: There are no bold math fonts on input line 183.
 
@@ -579,17 +596,6 @@ File: images/proposed/output.eps Graphic file (type eps)
 
 (./experiment.tex
 Chapter 4.
-File: images/experiment/dataset.eps Graphic file (type eps)
-<images/experiment/dataset.eps> [17
-
-
-
-
-]
-
-LaTeX Warning: Reference `fig:decoposition' on page 18 undefined on input line 
-13.
-
 File: images/experiment/decomp/srie/reflectance.eps Graphic file (type eps)
 <images/experiment/decomp/srie/reflectance.eps>
 File: images/experiment/decomp/wvm/reflectance.eps Graphic file (type eps)
@@ -612,17 +618,69 @@ File: images/experiment/decomp/jiep/illumination.eps Graphic file (type eps)
 <images/experiment/decomp/jiep/illumination.eps>
 File: images/experiment/decomp/prop/illumination.eps Graphic file (type eps)
 
-<images/experiment/decomp/prop/illumination.eps>) [18] [19] [20
+<images/experiment/decomp/prop/illumination.eps> [17
+
+
 
 
 ]
+File: images/experiment/qualitative/comp1/input.eps Graphic file (type eps)
+
+<images/experiment/qualitative/comp1/input.eps>
+File: images/experiment/qualitative/comp1/srie.eps Graphic file (type eps)
+
+<images/experiment/qualitative/comp1/srie.eps>
+File: images/experiment/qualitative/comp1/wvm.eps Graphic file (type eps)
+
+<images/experiment/qualitative/comp1/wvm.eps>
+File: images/experiment/qualitative/comp1/rrm.eps Graphic file (type eps)
+
+<images/experiment/qualitative/comp1/rrm.eps>
+File: images/experiment/qualitative/comp1/lime.eps Graphic file (type eps)
+
+<images/experiment/qualitative/comp1/lime.eps>
+File: images/experiment/qualitative/comp1/prop.eps Graphic file (type eps)
+
+<images/experiment/qualitative/comp1/prop.eps>
+File: images/experiment/qualitative/comp2/input.eps Graphic file (type eps)
+
+<images/experiment/qualitative/comp2/input.eps>
+File: images/experiment/qualitative/comp2/srie.eps Graphic file (type eps)
+
+<images/experiment/qualitative/comp2/srie.eps>
+File: images/experiment/qualitative/comp2/wvm.eps Graphic file (type eps)
+
+<images/experiment/qualitative/comp2/wvm.eps>
+File: images/experiment/qualitative/comp2/rrm.eps Graphic file (type eps)
+
+<images/experiment/qualitative/comp2/rrm.eps>
+File: images/experiment/qualitative/comp2/lime.eps Graphic file (type eps)
+
+<images/experiment/qualitative/comp2/lime.eps>
+File: images/experiment/qualitative/comp2/prop.eps Graphic file (type eps)
+
+<images/experiment/qualitative/comp2/prop.eps>
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 140.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 140.
+ [18] [19] [20] [21]
+
+LaTeX Warning: Reference `fig:arism' on page 22 undefined on input line 168.
+
+
+LaTeX Warning: Reference `tab:arism' on page 22 undefined on input line 168.
+
+) [22]
 \openout2 = `conclusion.aux'.
 
 
 No file conclusion.tex.
 \openout2 = `acknowledgement.aux'.
 
-(./acknowledgement.tex) [21
+(./acknowledgement.tex) [23
+
+
 
 
 
@@ -634,13 +692,13 @@ No file conclusion.tex.
 No file app.tex.
 \openout2 = `bib.aux'.
 
-(./bib.tex [22
+(./bib.tex [24
 
 
 
 
 
-]) [23]
+]) [25]
 \openout2 = `bio.aux'.
 
 
@@ -653,12 +711,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3690 strings out of 493671
- 53991 string characters out of 6151255
- 127843 words of memory out of 5000000
- 7097 multiletter control sequences out of 15000+600000
- 43664 words of font info for 132 fonts, out of 8000000 for 9000
+ 4207 strings out of 493671
+ 60633 string characters out of 6151255
+ 135882 words of memory out of 5000000
+ 7602 multiletter control sequences out of 15000+600000
+ 44127 words of font info for 134 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 42i,16n,41p,1403b,600s stack positions out of 5000i,500n,10000p,500000b,80000s
+ 42i,16n,41p,1398b,614s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on main.dvi (27 pages, 57380 bytes).
+Output written on main.dvi (29 pages, 75636 bytes).
