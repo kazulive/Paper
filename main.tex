@@ -35,19 +35,19 @@
 % 本文テキスト全体の高さ
 \setlength{\textheight}{670pt}
 
-%\title{
-%  \fontsize{23.5pt}{23.5pt}\selectfont{
-%  Low-Light Image Enhancement\\
-%  via Mixture L2-LP Variational Retinex Model\\
-%  with Adaptive Texture Map}
-%}
-
 \title{
-  \huge{
+  \fontsize{23.5pt}{23.5pt} \selectfont{
   Low-Light Image Enhancement\\
   via Mixture L2-LP Variational Retinex Model\\
   with Adaptive Texture Map}
 }
+
+%\title{
+%  \huge{
+%  Low-Light Image Enhancement\\
+%  via Mixture L2-LP Variational Retinex Model\\
+%  with Adaptive Texture Map}
+%}
 
 \author{
   \large{Thesis Supervisor}\\
@@ -70,7 +70,7 @@
 \pagestyle{plain}
 \setcounter{page}{1}  % ページ番号を1に設定
 \pagenumbering{roman}
-\include{abs}
+\include{abstract}
 
 %%%%%%%%%%%%%%%%%%%% 目次 %%%%%%%%%%%%%%%%%%%%
 \cleardoublepage
@@ -80,20 +80,27 @@
 \mbox{}
 \cleardoublepage
 
-%%%%%%%%%%%%%%%%%%%% 本文 %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% Documenet %%%%%%%%%%%%%%%%%%%%
 \setcounter{page}{1}
 \pagenumbering{arabic}
+%%%%%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%%%
 \include{introduction}
 \cleardoublepage
+%%%%%%%%%%%%%%%%%%%% Related Work %%%%%%%%%%%%%%%%%%%%
 \include{related}
 \cleardoublepage
+%%%%%%%%%%%%%%%%%%%% Proposed Method %%%%%%%%%%%%%%%%%%%%
 \include{proposed}
 \cleardoublepage
+%%%%%%%%%%%%%%%%%%%% Experiment %%%%%%%%%%%%%%%%%%%%
 \include{experiment}
 \cleardoublepage
+%%%%%%%%%%%%%%%%%%%% Conclusion %%%%%%%%%%%%%%%%%%%%
 \include{conclusion}
+\cleardoublepage
+%%%%%%%%%%%%%%%%%%%% Acknowledgement %%%%%%%%%%%%%%%%%%%%
 \include{acknowledgement}
-
+\cleardoublepage
 %%%%%%%%%%%%%%謝辞，参考文献，付録%%%%%%%%%%%%%%
 \appendix % 付録
 
@@ -107,7 +114,7 @@
 \include{app}
 
 \include{bib}
-\include{bio}
+\include{biography}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}

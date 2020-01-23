@@ -1,7 +1,4 @@
 \relax 
-\citation{l2-lp}
-\citation{block}
-\citation{iterate}
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Proposed Method}{9}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -9,23 +6,25 @@
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}Mixture L2-LP Variational Model}{9}}
 \newlabel{sec:L2-LP}{{3.1}{9}}
 \newlabel{eq:proposed/equation}{{3.1}{9}}
+\citation{l2-lp}
+\citation{block}
+\citation{iterate}
 \citation{l0-sparse}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces The image represents the flowchart of the proposed method. (i)The proposed method changes the constraint terms further considered the characteristics for each component. (ii)The proposed method generates adaptive texture map to constrain noise amplification and over-enhancement in the estimated reflectance. \relax }}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Flowchart of the proposed method. (i)The proposed method changes the constraint terms which further considers the characteristics for reflectance and illumination. (ii)The proposed method develop an adaptive texture map as a weight of the constraint term on reflectance which tunes the noise reduction rate according to the brightness of an observed image and texture component in reflectance.\relax }}{10}}
 \newlabel{fig:proposed/flowchart}{{3.1}{10}}
 \newlabel{eq:approximation}{{3.2}{10}}
-\newlabel{eq:lp_shape}{{3.4}{10}}
+\newlabel{eq:lp_shape}{{3.3}{10}}
 \citation{activation}
-\citation{jiep}
 \newlabel{fig:nom_p/comparison}{{3.2a}{11}}
 \newlabel{sub@fig:nom_p/comparison}{{a}{11}}
 \newlabel{fig:nom_p/graph_norm_p}{{3.2b}{11}}
 \newlabel{sub@fig:nom_p/graph_norm_p}{{b}{11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces The images represent various plots about the $L_{p}$ norm, when $p \approx 0$.\relax }}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Plots of the analysis of the $L_{p}$ norm function when $p=0$.\relax }}{11}}
 \newlabel{fig:graph_lp}{{3.2}{11}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Adaptive Texture Map}{11}}
 \newlabel{sec:adaptive}{{3.2}{11}}
-\newlabel{eq: adaptive_texture}{{3.5}{11}}
-\newlabel{eq: initial_weight}{{3.6}{11}}
+\newlabel{eq:adaptive_texture}{{3.4}{11}}
+\citation{jiep}
 \newlabel{fig. p-04}{{3.3a}{12}}
 \newlabel{sub@fig. p-04}{{a}{12}}
 \newlabel{fig. p-10}{{3.3b}{12}}
@@ -34,47 +33,51 @@
 \newlabel{sub@fig. p-20}{{c}{12}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Comparison of decomposition results for different values of norm $p$. ((a)-(c) top: reflectance, bottom: illumination)\relax }}{12}}
 \newlabel{fig:comparison_p}{{3.3}{12}}
-\newlabel{eq: mlv}{{3.7}{12}}
-\newlabel{eq:maginitude}{{3.8}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces The image represents the classification of regions where the adaptive texture map has an impact on.\relax }}{13}}
+\newlabel{eq:adaptive/initial_weight}{{3.5}{12}}
+\newlabel{eq: mlv}{{3.6}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Classification of regions where the adaptive texture map has an impact on.\relax }}{13}}
 \newlabel{fig:adaptive/classification}{{3.4}{13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces The image represents $W_{B}$. $W_{B}$ contains smaller values in bright regions, in contrast, larger values in dark regions.\relax }}{13}}
-\newlabel{fig:adaptive/wb}{{3.5}{13}}
+\newlabel{eq:adaptive/parameter}{{3.7}{13}}
+\newlabel{eq:maginitude}{{3.8}{13}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.3}Solution}{13}}
 \newlabel{sec:solution}{{3.3}{13}}
-\newlabel{eq: i_subproblem}{{3.9}{13}}
-\newlabel{fig:mlv_normal}{{3.6a}{14}}
-\newlabel{sub@fig:mlv_normal}{{a}{14}}
-\newlabel{fig:mlv_pow}{{3.6b}{14}}
-\newlabel{sub@fig:mlv_pow}{{b}{14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Comparison of MLV results for different values of $a_{r}$. As the value of $a_{r}$ decreases, MLV can obtain more rich gradient information.\relax }}{14}}
-\newlabel{fig:mlv_change}{{3.6}{14}}
-\newlabel{fig:wo}{{3.7a}{14}}
-\newlabel{sub@fig:wo}{{a}{14}}
-\newlabel{fig:w}{{3.7b}{14}}
-\newlabel{sub@fig:w}{{b}{14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Comparison of reflectance results. (a) the estimated reflectance without $W$; (b) the estimated reflectance with $W$.\relax }}{14}}
-\newlabel{fig:adaptive/effectiveness}{{3.7}{14}}
+\newlabel{eq:i_subproblem}{{3.9}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces The image of $W_{B}$. $W_{B}$ contains larger values in dark regions, while contains smaller values in bright regions, while contains larger values in dark regions.\relax }}{14}}
+\newlabel{fig:adaptive/wb}{{3.5}{14}}
 \newlabel{eq:classic_i_subproblem}{{3.10}{14}}
 \newlabel{eq: i_solution}{{3.11}{14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces The image represents the plots of the average edge magnitude.\relax }}{15}}
-\newlabel{fig:adaptive/edge_magnitude}{{3.8}{15}}
-\newlabel{eq: r_subproblem}{{3.12}{15}}
-\newlabel{eq:classic_r_subproblem}{{3.13}{15}}
-\newlabel{eq: solution_r_subproblem}{{3.14}{15}}
-\newlabel{eq_final}{{3.3}{15}}
-\newlabel{fig:proposed/input}{{3.9a}{16}}
-\newlabel{sub@fig:proposed/input}{{a}{16}}
-\newlabel{fig:proposed/illumination}{{3.9b}{16}}
-\newlabel{sub@fig:proposed/illumination}{{b}{16}}
-\newlabel{fig:proposed/reflectance}{{3.9c}{16}}
-\newlabel{sub@fig:proposed/reflectance}{{c}{16}}
-\newlabel{fig:proposed/enhanced}{{3.9d}{16}}
-\newlabel{sub@fig:proposed/enhanced}{{d}{16}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces The images represent the result of the proposed method.\relax }}{16}}
-\newlabel{fig:proposed/output}{{3.9}{16}}
+\newlabel{eq: r_subproblem}{{3.12}{14}}
+\newlabel{eq:classic_r_subproblem}{{3.13}{14}}
+\newlabel{eq: solution_r_subproblem}{{3.14}{14}}
+\newlabel{eq_final}{{3.3}{14}}
+\newlabel{fig:mlv_normal}{{3.6a}{15}}
+\newlabel{sub@fig:mlv_normal}{{a}{15}}
+\newlabel{fig:mlv_pow}{{3.6b}{15}}
+\newlabel{sub@fig:mlv_pow}{{b}{15}}
+\newlabel{fig:mlv_prop}{{3.6c}{15}}
+\newlabel{sub@fig:mlv_prop}{{c}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Comparison of MLV results for different values of $a_{r}$. The proposed $a_{r}$ contributes to distinguish between regions which should be revealed and regions which should be constrained.\relax }}{15}}
+\newlabel{fig:mlv_change}{{3.6}{15}}
+\newlabel{fig:wo}{{3.7a}{16}}
+\newlabel{sub@fig:wo}{{a}{16}}
+\newlabel{fig:w}{{3.7b}{16}}
+\newlabel{sub@fig:w}{{b}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Comparison of reflectance results. (a) the estimated reflectance without $W$; (b) the estimated reflectance with $W$.\relax }}{16}}
+\newlabel{fig:adaptive/effectiveness}{{3.7}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Plots of the average edge magnitude.\relax }}{16}}
+\newlabel{fig:adaptive/edge_magnitude}{{3.8}{16}}
+\newlabel{fig:proposed/input}{{3.9a}{17}}
+\newlabel{sub@fig:proposed/input}{{a}{17}}
+\newlabel{fig:proposed/illumination}{{3.9b}{17}}
+\newlabel{sub@fig:proposed/illumination}{{b}{17}}
+\newlabel{fig:proposed/reflectance}{{3.9c}{17}}
+\newlabel{sub@fig:proposed/reflectance}{{c}{17}}
+\newlabel{fig:proposed/enhanced}{{3.9d}{17}}
+\newlabel{sub@fig:proposed/enhanced}{{d}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces The results of the proposed method.\relax }}{17}}
+\newlabel{fig:proposed/output}{{3.9}{17}}
 \@setckpt{proposed}{
-\setcounter{page}{17}
+\setcounter{page}{18}
 \setcounter{equation}{14}
 \setcounter{enumi}{2}
 \setcounter{enumii}{0}

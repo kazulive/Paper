@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (sjis) (TeX Live 2017/W32TeX) (preloaded format=platex 2017.4.9)  13 JAN 2020 19:41
+This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (sjis) (TeX Live 2017/W32TeX) (preloaded format=platex 2017.4.9)  23 JAN 2020 18:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -309,9 +309,9 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 35.
 LaTeX Info: Redefining \hbar on input line 50.
 ) (./main.aux
-(./abs.aux) (./introduction.aux) (./related.aux) (./proposed.aux)
+(./abstract.aux) (./introduction.aux) (./related.aux) (./proposed.aux)
 (./experiment.aux) (./conclusion.aux) (./acknowledgement.aux) (./app.aux)
-(./bib.aux) (./bio.aux))
+(./bib.aux) (./biography.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
@@ -374,17 +374,29 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 ] [2
 
 ]
-\openout2 = `abs.aux'.
+\openout2 = `abstract.aux'.
 
 
-No file abs.tex.
+(./abstract.tex
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+) [1
+
+] [2
+
+
+]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <24.88> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 78.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <24.88> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 78.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 78.
-(./main.toc
+ (./main.toc
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
@@ -399,12 +411,9 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
- [1
+ [3
 
-
-
-
-] [2
+] [4
 
 ]
 \openout2 = `introduction.aux'.
@@ -419,12 +428,6 @@ Chapter 1.
 
  (./related.tex
 Chapter 2.
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 5.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 5.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
 File: images/retinex/input.eps Graphic file (type eps)
 <images/retinex/input.eps>
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
@@ -439,7 +442,7 @@ File: images/msr/input.eps Graphic file (type eps)
 File: images/msr/reflectance.eps Graphic file (type eps)
 
 <images/msr/reflectance.eps>
-Overfull \hbox (2.28003pt too wide) in paragraph at lines 40--50
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 38--48
 [][] [] 
  []
 
@@ -458,23 +461,23 @@ File: images/variational/illumination.eps Graphic file (type eps)
 <images/variational/illumination.eps>
 File: images/variational/output.eps Graphic file (type eps)
  <images/variational/output.eps>
-Overfull \hbox (2.28003pt too wide) in paragraph at lines 69--89
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 67--87
 [][] []
  []
 
 
-Overfull \hbox (2.28003pt too wide) in paragraph at lines 69--89
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 67--87
 [] [] 
  []
 
 [4]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 110.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 106.
 
  (c:/w32tex/share/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 110.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 106.
  [5]
 File: images/jiep/analysis/analysis.eps Graphic file (type eps)
 
@@ -489,12 +492,12 @@ File: images/jiep/illumination.eps Graphic file (type eps)
 File: images/jiep/output.eps Graphic file (type eps)
 
 <images/jiep/output.eps>
-Overfull \hbox (2.28003pt too wide) in paragraph at lines 131--151
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 124--144
 [][] []
  []
 
 
-Overfull \hbox (2.28003pt too wide) in paragraph at lines 131--151
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 124--144
 [] [] 
  []
 
@@ -514,74 +517,78 @@ File: images/proposed/flowchart.eps Graphic file (type eps)
 
 
 
-]
+] [10]
 File: images/norm_p/graph/graph_norm.eps Graphic file (type eps)
  <images/norm_p/graph/graph_norm.eps>
 File: images/norm_p/graph/graph_norm_p.eps Graphic file (type eps)
 
 <images/norm_p/graph/graph_norm_p.eps>
-Overfull \hbox (2.28003pt too wide) in paragraph at lines 52--62
-[][] [] 
- []
-
 File: images/norm_p/reflectance/p06.eps Graphic file (type eps)
-<images/norm_p/reflectance/p06.eps>
-Overfull \hbox (1.82047pt too wide) in paragraph at lines 70--71
+ <images/norm_p/reflectance/p06.eps>
+Overfull \hbox (1.82047pt too wide) in paragraph at lines 67--68
  [][] 
  []
 
 File: images/norm_p/reflectance/p10.eps Graphic file (type eps)
 <images/norm_p/reflectance/p10.eps>
-Overfull \hbox (1.82047pt too wide) in paragraph at lines 74--75
+Overfull \hbox (1.82047pt too wide) in paragraph at lines 71--72
  [][] 
  []
 
 File: images/norm_p/reflectance/p20.eps Graphic file (type eps)
 <images/norm_p/reflectance/p20.eps>
-Overfull \hbox (1.82047pt too wide) in paragraph at lines 78--79
+Overfull \hbox (1.82047pt too wide) in paragraph at lines 75--76
  [][] 
  []
 
 File: images/norm_p/illumination/p06.eps Graphic file (type eps)
 <images/norm_p/illumination/p06.eps>
-Overfull \hbox (1.82047pt too wide) in paragraph at lines 83--84
+Overfull \hbox (1.82047pt too wide) in paragraph at lines 80--81
  [][] 
  []
 
 File: images/norm_p/illumination/p10.eps Graphic file (type eps)
 <images/norm_p/illumination/p10.eps>
-Overfull \hbox (1.82047pt too wide) in paragraph at lines 88--89
+Overfull \hbox (1.82047pt too wide) in paragraph at lines 85--86
  [][] 
  []
 
 File: images/norm_p/illumination/p20.eps Graphic file (type eps)
 <images/norm_p/illumination/p20.eps>
-Overfull \hbox (1.82047pt too wide) in paragraph at lines 93--94
+Overfull \hbox (1.82047pt too wide) in paragraph at lines 90--91
  [][] 
  []
 
-[10] [11]
+[11] [12]
 File: images/adaptive/classification.eps Graphic file (type eps)
  <images/adaptive/classification.eps>
 File: images/adaptive/wb.eps Graphic file (type eps)
  <images/adaptive/wb.eps>
-File: images/noise/MLV_10.eps Graphic file (type eps)
+File: images/noise/mlv_10.eps Graphic file (type eps)
 
-<images/noise/MLV_10.eps>
-File: images/noise/MLV_05.eps Graphic file (type eps)
- <images/noise/MLV_05.eps>
+<images/noise/mlv_10.eps>
+File: images/noise/mlv_05.eps Graphic file (type eps)
+ <images/noise/mlv_05.eps>
+File: images/noise/mlv_prop.eps Graphic file (type eps)
+
+<images/noise/mlv_prop.eps>
 File: images/adaptive/without.eps Graphic file (type eps)
-
-<images/adaptive/without.eps>
+ <images/adaptive/without.eps>
 File: images/adaptive/with.eps Graphic file (type eps)
- <images/adaptive/with.eps>
+
+<images/adaptive/with.eps>
 File: images/adaptive/graph_edge.eps Graphic file (type eps)
+ <images/adaptive/graph_edge.eps>
+Overfull \hbox (2.66017pt too wide) in paragraph at lines 124--202
+\OT1/ptm/m/n/12 where $\OML/ztmcm/m/it/12 G[]$ \OT1/ptm/m/n/12 and $\OML/ztmcm/
+m/it/12 G[]$ \OT1/ptm/m/n/12 rep-re-sent the hor-i-zon-tal and ver-ti-cal gra-d
+i-ent im-ages, re-spec-tively. Fig.3.8
+ []
 
-<images/adaptive/graph_edge.eps> [12]
 
-Package mathptmx Warning: There are no bold math fonts on input line 183.
+Package mathptmx Warning: There are no bold math fonts on input line 207.
 
-[13] [14]
+[13]
 File: images/proposed/input.eps Graphic file (type eps)
  <images/proposed/input.eps>
 File: images/proposed/illumination.eps Graphic file (type eps)
@@ -590,99 +597,167 @@ File: images/proposed/reflectance.eps Graphic file (type eps)
 
 <images/proposed/reflectance.eps>
 File: images/proposed/output.eps Graphic file (type eps)
- <images/proposed/output.eps>) [15] [16]
-\openout2 = `experiment.aux'.
-
-
-(./experiment.tex
-Chapter 4.
-File: images/experiment/decomp/srie/reflectance.eps Graphic file (type eps)
-<images/experiment/decomp/srie/reflectance.eps>
-File: images/experiment/decomp/wvm/reflectance.eps Graphic file (type eps)
-
-<images/experiment/decomp/wvm/reflectance.eps>
-File: images/experiment/decomp/srie/illumination.eps Graphic file (type eps)
-
-<images/experiment/decomp/srie/illumination.eps>
-File: images/experiment/decomp/wvm/illumination.eps Graphic file (type eps)
-
-<images/experiment/decomp/wvm/illumination.eps>
-File: images/experiment/decomp/jiep/reflectance.eps Graphic file (type eps)
-
-<images/experiment/decomp/jiep/reflectance.eps>
-File: images/experiment/decomp/prop/reflectance.eps Graphic file (type eps)
-
-<images/experiment/decomp/prop/reflectance.eps>
-File: images/experiment/decomp/jiep/illumination.eps Graphic file (type eps)
-
-<images/experiment/decomp/jiep/illumination.eps>
-File: images/experiment/decomp/prop/illumination.eps Graphic file (type eps)
-
-<images/experiment/decomp/prop/illumination.eps> [17
-
-
+ <images/proposed/output.eps>) [14] [15]
+[16] [17] [18
 
 
 ]
-File: images/experiment/qualitative/comp1/input.eps Graphic file (type eps)
+\openout2 = `experiment.aux'.
 
-<images/experiment/qualitative/comp1/input.eps>
-File: images/experiment/qualitative/comp1/srie.eps Graphic file (type eps)
+ (./experiment.tex
+Chapter 4.
+File: images/experiment/dataset1.eps Graphic file (type eps)
+<images/experiment/dataset1.eps> [19
 
-<images/experiment/qualitative/comp1/srie.eps>
-File: images/experiment/qualitative/comp1/wvm.eps Graphic file (type eps)
 
-<images/experiment/qualitative/comp1/wvm.eps>
-File: images/experiment/qualitative/comp1/rrm.eps Graphic file (type eps)
+]
+File: images/experiment/decomp1/srie/reflectance.eps Graphic file (type eps)
 
-<images/experiment/qualitative/comp1/rrm.eps>
-File: images/experiment/qualitative/comp1/lime.eps Graphic file (type eps)
+<images/experiment/decomp1/srie/reflectance.eps>
+File: images/experiment/decomp1/wvm/reflectance.eps Graphic file (type eps)
 
-<images/experiment/qualitative/comp1/lime.eps>
-File: images/experiment/qualitative/comp1/prop.eps Graphic file (type eps)
+<images/experiment/decomp1/wvm/reflectance.eps>
+File: images/experiment/decomp1/srie/illumination.eps Graphic file (type eps)
 
-<images/experiment/qualitative/comp1/prop.eps>
-File: images/experiment/qualitative/comp2/input.eps Graphic file (type eps)
+<images/experiment/decomp1/srie/illumination.eps>
+File: images/experiment/decomp1/wvm/illumination.eps Graphic file (type eps)
 
-<images/experiment/qualitative/comp2/input.eps>
-File: images/experiment/qualitative/comp2/srie.eps Graphic file (type eps)
+<images/experiment/decomp1/wvm/illumination.eps>
+File: images/experiment/decomp1/jiep/reflectance.eps Graphic file (type eps)
 
-<images/experiment/qualitative/comp2/srie.eps>
-File: images/experiment/qualitative/comp2/wvm.eps Graphic file (type eps)
+<images/experiment/decomp1/jiep/reflectance.eps>
+File: images/experiment/decomp1/prop/reflectance.eps Graphic file (type eps)
 
-<images/experiment/qualitative/comp2/wvm.eps>
-File: images/experiment/qualitative/comp2/rrm.eps Graphic file (type eps)
+<images/experiment/decomp1/prop/reflectance.eps>
+File: images/experiment/decomp1/jiep/illumination.eps Graphic file (type eps)
 
-<images/experiment/qualitative/comp2/rrm.eps>
-File: images/experiment/qualitative/comp2/lime.eps Graphic file (type eps)
+<images/experiment/decomp1/jiep/illumination.eps>
+File: images/experiment/decomp1/prop/illumination.eps Graphic file (type eps)
 
-<images/experiment/qualitative/comp2/lime.eps>
-File: images/experiment/qualitative/comp2/prop.eps Graphic file (type eps)
+<images/experiment/decomp1/prop/illumination.eps> [20] [21]
+File: images/experiment/qualitative/comp1/1/input.eps Graphic file (type eps)
 
-<images/experiment/qualitative/comp2/prop.eps>
+<images/experiment/qualitative/comp1/1/input.eps>
+File: images/experiment/qualitative/comp1/1/srie.eps Graphic file (type eps)
+
+<images/experiment/qualitative/comp1/1/srie.eps>
+File: images/experiment/qualitative/comp1/1/wvm.eps Graphic file (type eps)
+
+<images/experiment/qualitative/comp1/1/wvm.eps>
+File: images/experiment/qualitative/comp1/1/rrm.eps Graphic file (type eps)
+
+<images/experiment/qualitative/comp1/1/rrm.eps>
+File: images/experiment/qualitative/comp1/1/lime.eps Graphic file (type eps)
+
+<images/experiment/qualitative/comp1/1/lime.eps>
+File: images/experiment/qualitative/comp1/1/prop.eps Graphic file (type eps)
+
+<images/experiment/qualitative/comp1/1/prop.eps>
+File: images/experiment/qualitative/comp2/2/input.eps Graphic file (type eps)
+
+<images/experiment/qualitative/comp2/2/input.eps>
+File: images/experiment/qualitative/comp2/2/srie.eps Graphic file (type eps)
+
+<images/experiment/qualitative/comp2/2/srie.eps>
+File: images/experiment/qualitative/comp2/2/wvm.eps Graphic file (type eps)
+
+<images/experiment/qualitative/comp2/2/wvm.eps>
+File: images/experiment/qualitative/comp2/2/rrm.eps Graphic file (type eps)
+
+<images/experiment/qualitative/comp2/2/rrm.eps>
+File: images/experiment/qualitative/comp2/2/lime.eps Graphic file (type eps)
+
+<images/experiment/qualitative/comp2/2/lime.eps>
+File: images/experiment/qualitative/comp2/2/prop.eps Graphic file (type eps)
+
+<images/experiment/qualitative/comp2/2/prop.eps>
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 140.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 150.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 140.
- [18] [19] [20] [21]
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 150.
+ [22] [23] [24]
+File: images/experiment/quantitative/loe.eps Graphic file (type eps)
 
-LaTeX Warning: Reference `fig:arism' on page 22 undefined on input line 168.
+<images/experiment/quantitative/loe.eps> [25]
+File: images/experiment/arism/framework.eps Graphic file (type eps)
+
+<images/experiment/arism/framework.eps>
+File: images/experiment/quantitative/arism.eps Graphic file (type eps)
+
+<images/experiment/quantitative/arism.eps> [26]
+File: images/experiment/parameter/loe.eps Graphic file (type eps)
+
+<images/experiment/parameter/loe.eps>
+File: images/experiment/parameter/arism.eps Graphic file (type eps)
+ <images/experiment/parameter/arism.eps>
+File: images/experiment/parameter/reflectance/0.001-0.001.eps Graphic file (typ
+e eps)
+
+<images/experiment/parameter/reflectance/0.001-0.001.eps>
+File: images/experiment/parameter/reflectance/0.001-0.01.eps Graphic file (type
+ eps)
+
+<images/experiment/parameter/reflectance/0.001-0.01.eps>
+File: images/experiment/parameter/reflectance/0.01-0.001.eps Graphic file (type
+ eps)
+
+<images/experiment/parameter/reflectance/0.01-0.001.eps>
+File: images/experiment/parameter/reflectance/0.01-0.01.eps Graphic file (type 
+eps)
+
+<images/experiment/parameter/reflectance/0.01-0.01.eps>
+File: images/experiment/parameter/illumination/0.001-0.001.eps Graphic file (ty
+pe eps)
+
+<images/experiment/parameter/illumination/0.001-0.001.eps>
+File: images/experiment/parameter/illumination/0.001-0.01.eps Graphic file (typ
+e eps)
+
+<images/experiment/parameter/illumination/0.001-0.01.eps>
+File: images/experiment/parameter/illumination/0.01-0.001.eps Graphic file (typ
+e eps)
+
+<images/experiment/parameter/illumination/0.01-0.001.eps>
+File: images/experiment/parameter/illumination/0.01-0.01.eps Graphic file (type
+ eps)
+
+<images/experiment/parameter/illumination/0.01-0.01.eps>
+File: images/experiment/parameter/output/0.001-0.001.eps Graphic file (type eps
+)
+
+<images/experiment/parameter/output/0.001-0.001.eps>
+File: images/experiment/parameter/output/0.001-0.01.eps Graphic file (type eps)
 
 
-LaTeX Warning: Reference `tab:arism' on page 22 undefined on input line 168.
+<images/experiment/parameter/output/0.001-0.01.eps>
+File: images/experiment/parameter/output/0.01-0.001.eps Graphic file (type eps)
 
-) [22]
+
+<images/experiment/parameter/output/0.01-0.001.eps>
+File: images/experiment/parameter/output/0.01-0.01.eps Graphic file (type eps)
+
+<images/experiment/parameter/output/0.01-0.01.eps>) [27] [28] [29] [30
+
+
+]
 \openout2 = `conclusion.aux'.
 
 
-No file conclusion.tex.
+(./conclusion.tex
+Chapter 5.
+) [31
+
+
+] [32
+
+
+]
 \openout2 = `acknowledgement.aux'.
 
-(./acknowledgement.tex) [23
+ (./acknowledgement.tex) [33
 
 
-
-
+] [34
 
 
 ]
@@ -692,31 +767,29 @@ No file conclusion.tex.
 No file app.tex.
 \openout2 = `bib.aux'.
 
-(./bib.tex [24
+(./bib.tex [35
 
 
 
 
+]) [36]
+\openout2 = `biography.aux'.
 
-]) [25]
-\openout2 = `bio.aux'.
+ (./biography.tex) [37
 
 
-No file bio.tex.
-(./main.aux (./abs.aux) (./introduction.aux) (./related.aux) (./proposed.aux)
-(./experiment.aux) (./conclusion.aux) (./acknowledgement.aux) (./app.aux)
-(./bib.aux) (./bio.aux))
 
-LaTeX Warning: There were undefined references.
-
- ) 
+] (./main.aux (./abstract.aux)
+(./introduction.aux) (./related.aux) (./proposed.aux) (./experiment.aux)
+(./conclusion.aux) (./acknowledgement.aux) (./app.aux) (./bib.aux)
+(./biography.aux)) ) 
 Here is how much of TeX's memory you used:
- 4207 strings out of 493671
- 60633 string characters out of 6151255
+ 4279 strings out of 493671
+ 62797 string characters out of 6151255
  135882 words of memory out of 5000000
- 7602 multiletter control sequences out of 15000+600000
- 44127 words of font info for 134 fonts, out of 8000000 for 9000
+ 7653 multiletter control sequences out of 15000+600000
+ 45097 words of font info for 137 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 42i,16n,41p,1398b,614s stack positions out of 5000i,500n,10000p,500000b,80000s
+ 42i,17n,41p,2522b,618s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on main.dvi (29 pages, 75636 bytes).
+Output written on main.dvi (43 pages, 95752 bytes).
